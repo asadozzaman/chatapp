@@ -90,7 +90,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     ###custome
-    'chatapp.middleware.SetSessionMiddleware',
+    # 'chatapp.middleware.SetSessionMiddleware',
 ]
 
 ROOT_URLCONF = "demo.urls"

@@ -68,17 +68,17 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 def chat_add(request):
     
 
-    try:
-        # Retrieve 'uid' from session
-        session_uid = request.session.get('uid')
+    # try:
+    #     # Retrieve 'uid' from session
+    #     session_uid = request.session.get('uid')
         
-        if not session_uid:
-            session_uid = "4exc333443"
+    #     if not session_uid:
+    #         session_uid = "4exc333443"
     
     
-    except Exception as e:
-        # Handle any unexpected errors
-        return JsonResponse({'error': f'An unexpected error occurred: {str(e)}'}, status=500)
+    # except Exception as e:
+    #     # Handle any unexpected errors
+    #     return JsonResponse({'error': f'An unexpected error occurred: {str(e)}'}, status=500)
 
     session_uid = "4exc333443"
     
