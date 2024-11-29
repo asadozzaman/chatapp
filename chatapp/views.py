@@ -50,17 +50,58 @@ safety_settings = [
 ]
 
 
-model = genai.GenerativeModel(model_name="gemini-1.0-pro",
-                              generation_config=generation_config,
-                              safety_settings=safety_settings)
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-pro",
+    generation_config=generation_config,
+    system_instruction="""
 
+**Objective:**
 
+The model should identify and classify the **sentiment** and **intent** of the input, whether it's a paragraph of text or an image.
 
+**Input:**
 
+* **Text:** A paragraph of text, potentially including emojis, slang, or other informal language.
+* **Image:** An image that may contain text or visual elements conveying emotions or intentions.
 
+**Output:**
 
+* **Sentiment:** Classified as either **positive**, **negative**, or **neutral**. For more granular analysis, nuanced sentiment categories like "joy," "anger," "sadness," or "fear" might be included. 
+* **Intent:** Classified into categories based on user intentions. Examples could include:
+    * **Informative:** Seeking information or factual data.
+    * **Task-oriented:** Seeking assistance or requesting a specific action.
+    * **Emotional:** Expressing feelings or seeking emotional support.
+    * **Social:** Engaging in social interactions or expressing opinions. 
 
+**Model Training:**
 
+The model should be trained on a large and diverse dataset of labeled text and images. This dataset should encompass various languages, writing styles, and emotional expressions to ensure accurate identification of sentiment and intent across different contexts. 
+
+**Important Considerations:**
+
+* **Context Sensitivity:** The model should take into account the context of the input to accurately interpret sentiment and intent. For instance, "I'm feeling tired" could be neutral in a casual conversation, but negative in the context of a health checkup.
+* **Emotional Nuance:** The model should be capable of recognizing complex emotions, such as irony, sarcasm, or subtle hints of negative sentiment disguised as positive language.
+* **Cultural Sensitivity:** The model should be trained to recognize variations in emotional expression and language across different cultures and communities.
+
+**Additional Capabilities (Optional):**
+
+* **Reasoning:** The model can be further enhanced with reasoning capabilities to understand the underlying reasons behind the sentiment and intent.
+* **Personalization:** By integrating user profile data, the model can adapt its analysis based on individual preferences and past interactions.
+* **Multi-modal Analysis:** The model can integrate both text and image analysis to provide a comprehensive understanding of input content.
+
+**Example:**
+
+**Input:**
+
+* **Text:** "I'm so frustrated! My computer keeps crashing. 😠"
+
+**Output:**
+
+* **Sentiment:** Negative
+* **Intent:** Task-oriented (seeking help with a technical issue)
+
+"""
+)
 
 
 
@@ -91,7 +132,13 @@ def chat_add(request):
         # Sending POST request to the external service
         response = ask_question(question)
         answer_text = response.get('answer_text', 'No answer provided')
-
+        # Ensure answer_text is a valid string
+        specific_wordsALERTstar = ['*', '**']
+        if isinstance(answer_text, str):
+            for wordstar in specific_wordsALERTstar:
+                # Replace ** with a real line break
+                answer_text = answer_text.replace(wordstar, '\n')
+        
         # Initialize or update session variables
         if 'counter' not in request.session:
             request.session['counter'] = 0
@@ -248,8 +295,22 @@ def sentiment_add(request):
         specific_words = ['Intent']
         for word in specific_words:
             chatbot_response = chatbot_response.replace(word, f'<br/>{word}')
+
+        specific_wordsALERT = ['ALARM']
+        for word in specific_wordsALERT:
+            chatbot_response = chatbot_response.replace(word, f'<br/>{word}')
+
+        specific_wordsALERT = ['ALERT']
+        for word in specific_wordsALERT:
+            chatbot_response = chatbot_response.replace(word, f'<br/>{word}')
+
+        specific_wordsALERTstar = ['**']
+        for wordstar in specific_wordsALERTstar:
+            # Replace ** with a space
+            chatbot_response = chatbot_response.replace(wordstar, ' ')
+
         
-        specific_wordsn = ['Intent', 'Sentiment']
+        specific_wordsn = ['Intent', 'Sentiment','ALARM','ALERT']
         for wordn in specific_wordsn:
             chatbot_response = chatbot_response.replace(wordn, f'<strong>{wordn}</strong>')
         
