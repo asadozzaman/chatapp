@@ -1,0 +1,251 @@
+
+/* Masonry */
+.iqonic-metro-block .iqonic-project-box{
+    margin-bottom:0;
+    border-radius: var(--border-radius);
+}
+.iqonic-metro-block .grid-sizer{
+    width: 20%;
+}
+.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item ,
+.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.portrait {
+    width: 20%;
+    display: block;
+}
+
+.iqonic-masonry-item {
+    margin-bottom: 12px;
+    padding: 12px 12px 0;
+  }
+.iqonic-masonry-block .iqonic-masonry-item{
+    position: relative;
+    overflow: hidden;
+}
+.iqonic-masonry-block .owl-carousel .iqonic-project-box{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.iqonic-masonry-block .iqonic-port-overlay, .iqonic-masonry-block .owl-carousel .iqonic-project-box .iqonic-port-overlay {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background: var(--color-theme-white);
+    padding: 20px 35px 20px 30px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+.iqonic-masonry-block .owl-carousel .iqonic-grid-item.s-60.col-md-6:hover .iqonic-project-box .iqonic-port-overlay{
+    left: 15px;
+    opacity: 1;
+}
+.iqonic-masonry-block  .iqonic-masonry-item:hover .iqonic-port-overlay, .iqonic-masonry-block .owl-carousel .iqonic-project-box:hover .iqonic-port-overlay{
+    left: 30px;
+    opacity: 1;
+}
+.iqonic-masonry-block .iqonic-port-overlay .iqonic-port-cat{
+ color: var(--color-theme-primary);
+    font-size: var(--font-size-normal);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.iqonic-masonry-block .iqonic-port-overlay .iqonic-port-name{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+}
+.iqonic-masonry-block .iqonic-port-overlay h5{
+    font-size: 1.125em;
+}
+.iqonic-masonry-block .iqonic-masonry-item .iqonic-project-box img{
+    width:100%;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.iqonic-masonry-block .iqonic-masonry-item .iqonic-project-box:hover img{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item {
+    background: var(--color-theme-primary);
+}
+.iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item .project-main-details {
+    width: 100%;
+    height: 100%;
+    padding: 100px 50px;
+    position: relative;
+}
+.iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item .left.css_prefix-title-box .css_prefix-subtitle,
+.iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item .left.css_prefix-title-box .css_prefix-heading-title,
+.iqonic-masonry-block .project-main-details .css_prefix_main h5, .iqonic-masonry-block .project-main-details .css_prefix-title-desc p
+{
+    color: var(--color-theme-white);
+}
+.iqonic-masonry-block .project-main-details .css_prefix_main p{
+    margin: 7px 0 10px 0;
+}
+.iqonic-masonry-block .project-main-details .css_prefix_main .css_prefix-clients {
+    margin: 7px 0;
+}
+.iqonic-pro-slider .css_prefix_content .css_prefix_main{
+    margin-bottom: 25px;
+}
+.iqonic-pro-slider .css_prefix_content .css_prefix_main p.css_prefix-date{margin-bottom: 0; } 
+.iqonic-pro-slider .css_prefix_content .css_prefix_main:last-child{margin-bottom: 0;}
+.iqonic-pro-slider .css_prefix_content .css_prefix_main{display: inline-block;width: 100%;}
+.iqonic-pro-slider .css_prefix_content .css_prefix_main .css_prefix-clients ,.iqonic-pro-slider .css_prefix_content .css_prefix_main .css_prefix-date{
+    color: var(--color-theme-secondary);
+    margin-bottom: 0;
+}
+.iqonic-project-box{
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+.iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item .iqonic-grid-item.s-60.col-md-6{
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Project Detail */
+
+.iqonic-masonry-block .iqonic-pro-slider .owl-item .iqonic-grid-item
+{
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+} 
+
+.iqonic-project-details-block .iqonic-project-details-block-inner .iqonic-grid-item
+{
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-categoey-bg);
+    padding: 30px 0;
+    margin: 0 15px;
+    margin-bottom: 30px;
+}
+
+.iqonic-project-details-block .css_prefix-project-info.css_prefix_heading
+{
+    color: var(--color-theme-secondary);
+}
+.iqonic-project-details-block .css_prefix_heading
+{
+    display: inline-block;
+   
+}
+.iqonic-project-details-block .iqonic-port-name.css_prefix_heading
+{
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 8px;
+}
+.iqonic-project-details-block .css_prefix-clients
+{
+    display: inline-block;
+    width: auto;
+    float: none;
+    padding-left: 15px;
+    color: var(--color-theme-secondary);
+}
+.iqonic-project-details-block .css_prefix_content .css_prefix_main 
+{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    margin-right: 60px;
+}
+.iqonic-project-details-block .css_prefix_content .css_prefix_main .css_prefix_heading
+{
+    color: var(--color-theme-white-light);
+}
+.iqonic-project-details-block .iqonic-port-name.css_prefix_heading:before{content: "";
+    background-color: var(--color-theme-primary);
+    width: 2px;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);}
+.iqonic-project-details-block .css_prefix_content .css_prefix_main::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    background: linear-gradient(180deg, #F5F5F5 0%, #DB0C26 46.88%, #FFFFFF 100%);
+    height: 50%;
+    width: 1px;
+}
+.iqonic-project-details-block .css_prefix_content .css_prefix_main:last-child:after{display: none;}
+/* Style-2*/
+.iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-masonry-item, .iqonic-metro-block .iqonic-masonry-grid.style-two .grid-sizer{
+    width: 25%;
+  }
+  
+
+.iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-masonry-item.s-20.portrait{
+    width:20%;
+    padding: 0 10px;
+}
+.iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-project-box {
+    margin-bottom: 20px;
+}
+
+
+/* responsive */
+@media (max-width:1024px){
+    .iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.portrait{
+        width: 100%;
+    }
+    .iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.landscape ,.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item, .iqonic-metro-block .grid-sizer,.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.portrait{width:50%;}
+    .iqonic-masonry-block .owl-carousel.iqonic-grid .owl-item .project-main-details{padding:30px;}
+    .iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-masonry-item.s-20.portrait{
+        width: 50%;
+    }
+}
+
+@media (max-width:991px){
+    .iqonic-project-details-block .iqonic-grid .iqonic-project-details-block-inner .iqonic-grid-item{
+        margin-top:30px;
+    }
+}
+
+@media (max-width:767px){
+
+    .iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-masonry-item.s-20.portrait ,.iqonic-metro-block .iqonic-masonry-grid.style-two .iqonic-masonry-item.s-20.landscape{
+        width: 100%;
+    }
+    .iqonic-masonry-block .iqonic-pro-slider.slider-style-four .owl-item .iqonic-grid-item
+    {
+        padding: 200px;
+        background-size: cover!important;
+    }
+}
+
+
+@media (max-width:480px){
+    .iqonic-project-details-block .css_prefix_content .css_prefix_main{width: 100%;}
+    .iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.landscape{width:100%;}
+    .iqonic-masonry-block .iqonic-masonry-item .iqonic-project-box img{height:300px;object-fit:cover;}
+    .iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.landscape ,.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item, .iqonic-metro-block .grid-sizer,.iqonic-metro-block .iqonic-masonry-grid .iqonic-masonry-item.s-20.portrait{
+        width: 100%;
+    }
+
+}

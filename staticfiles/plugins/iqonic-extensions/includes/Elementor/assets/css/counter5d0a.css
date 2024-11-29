@@ -1,0 +1,61 @@
+/*--------------------------------------------------------------
+                      counter
+--------------------------------------------------------------*/
+.css_prefix-counter-info {
+    -webkit-text-stroke: 1px var(--border-color-light);
+    font-size: 150px;
+    color: transparent;
+    top: 50%;
+    transform: translateY(-64%);
+    left: 0;
+    position: absolute;
+}
+
+.counter-number-wrapper {
+    display: flex;
+    flex: none;
+}
+
+.counter-title-text.css_prefix-heading-title {
+    font-weight: var(--font-size-regular);
+    text-transform: capitalize;
+    color: var(--global-font-color);
+}
+
+.css_prefix-counter {
+    position: relative;
+    margin-top: 50px;
+}
+
+.css_prefix-detail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+@media (min-width:1025px) and (max-width:1300px){
+    .css_prefix-detail{
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:1024px){
+    .css_prefix-counter-info {
+        font-size: 120px;
+    }
+
+    .css_prefix-counter {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width:767px){
+    .css_prefix-counter-info {
+        font-size: 100px;
+    }
+
+    .css_prefix-counter {
+        margin-top: 50px;
+    }
+}

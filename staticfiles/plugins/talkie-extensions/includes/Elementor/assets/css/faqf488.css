@@ -1,0 +1,115 @@
+/*---------------------------------------------------------------------
+                  Frequently Asked Questions
+-----------------------------------------------------------------------*/
+.iq-faq {
+    z-index: 9;
+    position: relative;
+}
+
+.iq-faq .iq-faq-title {
+    position: relative;
+    font-family: var(--highlight-font-family);
+    padding: 15px 30px;
+    background: var(--global-body-lightcolor);
+    line-height: normal;
+    cursor: pointer;
+    display: block;
+    text-align: left;
+    color: var(--color-theme-white);
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.iq-faq .iq-faq-title h5 {
+    font-size: 18px;
+}
+
+.iq-faq .iq-faq-block.iq-active .iq-faq-title {
+    background-color: var(--color-theme-primary);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.iq-faq .iq-faq-block.iq-active .iq-faq-title h5 {
+    color: var(--color-theme-white);
+}
+
+.iq-faq .iq-faq-block.iq-active {
+    background: var(--color-theme-white-box);
+    border-radius: 4px;
+}
+
+.iq-faq .iq-faq-title .iq-faq-icon {
+    display: none;
+    color: var(--color-theme-primary);
+    float: right;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.iq-faq .iq-faq-block.iq-active .iq-faq-title .iq-faq-icon {
+    transform: rotate(90deg);
+}
+
+.iq-faq .iq-faq-details {
+    display: none;
+    text-align: left;
+    padding: 15px 30px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: var(--color-theme-white-box);
+}
+
+.iq-faq .iq-faq-details p {
+    margin-bottom: 0;
+}
+
+.iq-faq .iq-faq-block {
+    margin-bottom: 30px;
+    border: 1px solid var(--global-body-lightcolor);
+    border-radius: 5px;
+    padding: 0 0 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.iq-faq .iq-faq-block:last-child {
+    margin-bottom: 0;
+}
+
+.iq-faq .iq-faq-block.iq-active .iq-faq-title:before {
+    content: "\f2f4";
+    font-family: "Ionicons";
+    color: var(--color-theme-white);
+}
+
+.iq-faq .iq-faq-title:before {
+    cursor: pointer;
+    content: "\f2c7";
+    font-family: "Ionicons";
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    display: block;
+    color: var(--color-theme-secondary);
+    font-size: 22px;
+    line-height: normal;
+    font-weight: var(--font-weight-regular);
+    transition: all 0.25s ease-in-out 0s;
+}
+
+@media (max-width: 767px){
+    .iq-faq .iq-faq-title {
+		padding: 15px 15px;
+	}
+
+	.iq-faq .iq-faq-details {
+		padding: 15px 30px;
+	}
+    
+	.iq-faq .iq-faq-title:before {
+		right: 15px;
+	}
+}

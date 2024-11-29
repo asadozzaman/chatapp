@@ -1,0 +1,33 @@
+.css_prefix-video-img {
+    border-radius: var(--box-border-radius);
+    overflow: hidden;
+}
+
+.css_prefix-popup-video .css_prefix-video-icon .css_prefix-video {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    line-height: 50px;
+    color: var(--color-theme-white);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: var(--color-theme-primary);
+    z-index: 9;
+    border-radius: 50%;
+    transition: all 0.5s ease-out 0s;
+}
+
+.css_prefix-popup-video .css_prefix-video-icon .css_prefix-video:hover {
+    background-color: var(--color-theme-secondary);
+    color: var(--color-theme-white);
+}
+
+.css_prefix-popup-video .css_prefix-video-icon {
+    text-align: center;
+}

@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">	
+	{% load static %} 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'ui/assets/images/favicon.ico' %}">
+    <title>Foresightbyte</title>
+    <!-- bootstrap min css -->
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/plugins/fontawesome-6.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/plugins/unicons.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/plugins/swiper.min.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/vendor/magnific-popup.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/vendor/metismenu.css' %}" as="style">
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/vendor/bootstrap.min.css' %}" as="style">
+    <!-- custom css style -->
+    <link rel="stylesheet preload" href="{% static 'ui/assets/css/style.css' %}" as="style">
+
+    <style>
+        /* check auth or not */
+        .auth-buttons {
+            display: none;
+        }
+        .logout-buttons {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="index-four">
+
+    <!-- header-top area -->
+    <div class="header-top-four">
+        <div class="container-h-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-top-four-area-wrapper">
+                        <div class="social-area">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-behance"></i></a>
+                            <a href="#"><i class="fa-brands fa-discord"></i></a>
+                        </div>
+                        <p class="mid-disc">
+                            <a href="registration.html">Join us</a> as we make chatbots truly conversational
+                        </p>
+                        <div class="end-part">
+                            <a href="#">Privacy Policy</a>
+                            <a href="contact.html">Contact</a>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="1">(English)</option>
+                                <option value="2">(Bengali)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-top area end -->
+
+    <!-- rts banner area start -->
+    <div class="rts-sectio-gap banner-four-bg rts-section-gapBottom">
+        <div class="header-main-wrapper four-header header--sticky">
+            <div class="container-h-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-4-header-wrapper">
+                            <a href="{% url 'welcome' %}" class="logo">
+                                <img src="{% static 'ui/assets/images/logo/logo3.png' %}" alt="logo" loading="lazy" style="height: 40px;">
+                            </a>
+                            <div class="nav-area-main d-xl-block d-lg-block d-md-none d-sm-none d-none">
+                                <nav>
+                                    <ul>
+                                        <li><a class="links-main" href="{% url 'welcome' %}">Home</a></li>
+                                        <li><a class="links-main" href="{% url 'service' %}">Services</a></li>
+                                        <li><a class="links-main" href="{% url 'about' %}">About Us</a></li>
+                                        <li><a class="links-main" href="{% url 'contact' %}">Contact</a></li>
+                                        <li class="has-dropdown">
+                                            <a class="links-main" href="#">AI</a>
+                                            <ul class="submenu">
+                                                <li><a href="{% url 'chatui' %}">AI Chat</a></li>
+                                                <li><a href="{% url 'sentimentui' %}">Sentiment Analysis</a></li>
+                                                <!-- <li><a href="#">Try With Your Data</a></li> -->
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown mega-menu">
+                                            <a class="links-main" href="#">Pages</a>
+                                            <div class="rts-mega-menu">
+                                                <div class="wrapper">
+                                                    <div class="row g-0">
+                                                        <div class="col-lg-3">
+                                                            <ul class="mega-menu-item">
+                                                                <li>
+                                                                    <a href="{% url 'blog' %}">
+                                                                        <img src="{% static 'ui/assets/images/mega-menu/05.svg' %}" alt="icon">
+                                                                        <div class="info">
+                                                                            <p>Blogs</p>
+                                                                            <span>Read openup artical</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="{% url 'price' %}">
+                                                                        <img src="{% static 'ui/assets/images/mega-menu/03.svg' %}" alt="icon">
+                                                                        <div class="info">
+                                                                            <p>Pricing</p>
+                                                                            <span>Openup provide pro price</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="{% url 'faq' %}">
+                                                                        <img src="{% static 'ui/assets/images/mega-menu/15.svg' %}" alt="icon">
+                                                                        <div class="info">
+                                                                            <p>FAQ</p>
+                                                                            <span>Do you know openup</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-lg-3">
+                                                            <ul class="mega-menu-item auth-buttons">
+                                                                <li>
+                                                                    <a href="{% url 'registration' %}">
+                                                                        <img src="{% static 'ui/assets/images/mega-menu/08.svg' %}" alt="icon">
+                                                                        <div class="info">
+                                                                            <p>Register</p>
+                                                                            <span>Make your account</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="{% url 'reset' %}">
+                                                                        <img src="{% static 'ui/assets/images/mega-menu/12.svg' %}" alt="icon">
+                                                                        <div class="info">
+                                                                            <p>Reset</p>
+                                                                            <span>Rest your possword</span>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- nav end -->
+                            <div class="button-area auth-buttons" >
+                                <a href="{% url 'login' %}" class="rts-btn btn-lonly mr--30">Log in</a>
+                                <a href="{% url 'registration' %}" class="rts-btn btn-lonly mr--30">Get Started</a>
+                            </div>
+                            </br>
+                            <div class="button-area logout-buttons" >
+                                <button onclick="logOut()" class="rts-btn btn-lonly mr--30" style="color: rgb(92, 0, 0);">Log out <img src="{% static 'chatbot/assets/images/icons/09.png' %}" alt="icons"></button>
+                            </div>
+                            <div class="menu-btn d-xl-none d-lg-none d-md-block d-sm-block" id="menu-btn">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect width="20" height="2" fill="#1F1F25"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pt--80 pt_md--60 pt_sm--50">
+            <div class="row align-items-start">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-xl-1 order-lg-1 order-md-2 order-sm-2 order-2">
+                    <div class="banner-four-content mt--100 mt_md--50 mt_sm--50">
+                        <h1 class="title">
+                            Foreseeing<br> 
+                            Tomorrow, Today.
+                            <!-- Make your 
+                            automated replies <br>
+                            conversational -->
+                            <!-- <span class="right-tag">Ai Chatbot</span> -->
+                        </h1>
+                        <p class="disc">
+                            Foresightbyte Infotech: Your AI Partner for the Future
+                        </p>
+                        <div>
+                            <p class="disc" style="color: rgb(2, 131, 103);">
+                                <b>AI Chatbot for Every Business</b> <br>
+                                Our intelligent chatbot is designed to engage with your customers, <br>
+                                providing real-time responses and delivering personalized experiences on your behalf.
+                            </p>
+                        </div>
+                        <!-- <div class="button-area-main">
+                            <a href="about.html" class="rts-btn btn-primary">Get Started</a>
+                            <a class="btn-only" href="#">Book a Demo <i class="fa-regular fa-arrow-right"></i></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-xl-2 order-lg-2 order-md-1 order-sm-1 order-1 mt--20">
+                    <div class="thumbnail-banner-right">
+                        <img src="{% static 'ui/assets/images/banner/animation1.gif' %}" alt="banenr" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts banner area end -->
+
+    <!-- rts about-area start -->
+    <div class="rts-about-four rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-inner-main-four">
+                        <h2 class="title">
+                            Key Features:
+                        </h2>
+                        <div class="check-main-wrapper">
+                            <!-- soingle check -->
+                            <div class="single-check">
+                                <i class="fa-regular fa-check"></i>
+                                <p>24/7 Availability</p>
+                            </div>
+                            <p class="disc">
+                                Never miss a customer query again. Your chatbot works around the clock, ensuring customer satisfaction at any time of day.
+                            </p>
+                            <!-- soingle check end -->
+                            <!-- soingle check -->
+                            <div class="single-check">
+                                <i class="fa-regular fa-check"></i>
+                                <p>Seamless Integration</p>
+                            </div>
+                            <!-- soingle check end -->
+                            <p class="disc">
+                                Integrate our AI chatbot with your website or app effortlessly. No technical expertise needed—just plug and play!
+                            </p>
+                            <!-- soingle check -->
+                            <div class="single-check">
+                                <i class="fa-regular fa-check"></i>
+                                <p>Personalized Conversations</p>
+                            </div>
+                            <!-- soingle check end -->
+                            <p class="disc">
+                                Tailored to your business needs, the chatbot adapts its responses to reflect your brand’s voice and messaging.
+                            </p>
+                            <!-- soingle check -->
+                            <div class="single-check">
+                                <i class="fa-regular fa-check"></i>
+                                <p>Multi-Platform Support</p>
+                            </div>
+                            <!-- soingle check end -->
+                            <p class="disc">
+                                From websites to social media platforms, our chatbot can handle customer inquiries across all channels.
+                            </p>
+                            <!-- soingle check -->
+                            <div class="single-check">
+                                <i class="fa-regular fa-check"></i>
+                                <p>Analytics & Insights</p>
+                            </div>
+                            <!-- soingle check end -->
+                            <p class="disc">
+                                Gain valuable insights into customer behavior and preferences with real-time data analytics, helping you make informed business decisions.
+                            </p>
+                        </div>
+                        <a href="registration.html" class="rts-btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt_sm--50">
+                    <div class="thumbnail-main">
+                        <img src="{% static 'ui/assets/images/banner/animation2.gif' %}" alt="thumbnail" loading="lazy" style="height: 700px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts about-area end -->
+
+
+    <!-- rts sservice area start -->
+    <div class="rts-service-aarea-four rts-section-gap bg-service-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-main-center-4">
+                        <h2 class="title">
+                            Keep conversations going <br>
+                            across channels
+                        </h2>
+                        <p class="disc">
+                            Customers want to connect with you using their favorite channels <br>
+                            Integrate Openup with multiple platforms to make sure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt--20">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <!-- ingle service area start -->
+                    <div class="single-service-area-4">
+                        <div class="icon">
+                            <svg width="40" height="36" viewBox="0 0 40 36" fill="none" xmlns="http://www.w3.org/2000/svg' %}">
+                                <path d="M0 5.5C0 2.76562 2.1875 0.5 5 0.5H35C37.7344 0.5 40 2.76562 40 5.5V30.5C40 33.3125 37.7344 35.5 35 35.5H5C2.1875 35.5 0 33.3125 0 30.5V5.5ZM7.5 10.5C8.82812 10.5 10 9.40625 10 8C10 6.67188 8.82812 5.5 7.5 5.5C6.09375 5.5 5 6.67188 5 8C5 9.40625 6.09375 10.5 7.5 10.5ZM35 8C35 6.98438 34.1406 6.125 33.125 6.125H14.375C13.2812 6.125 12.5 6.98438 12.5 8C12.5 9.09375 13.2812 9.875 14.375 9.875H33.125C34.1406 9.875 35 9.09375 35 8Z" fill="#3F3EED" />
+                            </svg>
+                        </div>
+                        <h5 class="title">Website</h5>
+                        <p class="disc">
+                            Reach out to visitors proactively <br>
+                            to boost website engagement.
+                        </p>
+                        <a href="#">More Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- ingle service area end -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <!-- ingle service area start -->
+                    <div class="single-service-area-4">
+                        <div class="icon">
+                            <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg' %}">
+                                <path d="M35.9219 0C38.7344 0 40.9219 2.26562 40.9219 5V27.3438C40.9219 30 38.6562 32.2656 35.9219 32.2656H24.6719L14.9062 39.6094C14.2812 40 13.4219 39.6094 13.4219 38.8281V32.3438H5.92188C3.10938 32.3438 0.921875 30.1562 0.921875 27.4219V5C0.921875 2.26562 3.10938 0 5.92188 0H35.9219ZM10.9219 18.75C12.3281 18.75 13.4219 17.5781 13.4219 16.25C13.4219 15 12.25 13.8281 10.9219 13.8281C9.51562 13.8281 8.42188 15 8.42188 16.25C8.42188 17.5781 9.51562 18.75 10.9219 18.75ZM20.9219 18.75C22.3281 18.75 23.4219 17.5781 23.4219 16.25C23.4219 15 22.25 13.8281 20.9219 13.8281C19.5156 13.8281 18.4219 15 18.4219 16.25C18.4219 17.5781 19.5156 18.75 20.9219 18.75ZM30.9219 18.75C32.3281 18.75 33.4219 17.5781 33.4219 16.25C33.4219 15 32.25 13.8281 30.9219 13.8281C29.5156 13.8281 28.4219 15 28.4219 16.25C28.4219 17.5781 29.5156 18.75 30.9219 18.75Z" fill="#3F3EED" />
+                            </svg>
+                        </div>
+                        <h5 class="title">LiveChat</h5>
+                        <p class="disc">
+                            Reach out to visitors proactively <br>
+                            to boost website engagement.
+                        </p>
+                        <a href="#">More Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- ingle service area end -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <!-- ingle service area start -->
+                    <div class="single-service-area-4">
+                        <div class="icon">
+                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg' %}">
+                                <path d="M20 0.625C30.9375 0.625 39.375 8.67188 39.375 19.4531C39.375 33.125 26.3281 40.7812 14.375 37.5C13.6719 37.3438 13.5938 37.5 9.53125 39.2969C8.51562 39.6875 7.34375 38.9844 7.34375 37.8906C7.1875 34.2969 7.34375 33.9844 6.71875 33.3594C2.89062 30 0.625 25.0781 0.625 19.4531C0.625 8.67188 9.0625 0.625 20 0.625ZM31.6406 15.1562C32.1875 14.2969 31.1719 13.2812 30.3125 13.9062L24.2188 18.5156C23.75 18.8281 23.2031 18.8281 22.8125 18.5156L18.2812 15.1562C16.875 14.1406 14.9219 14.4531 14.0625 15.9375L8.35938 24.9219C7.8125 25.7812 8.82812 26.7969 9.6875 26.1719L15.7812 21.5625C16.25 21.25 16.7969 21.25 17.1875 21.5625L21.7188 24.9219C23.125 25.9375 25.0781 25.625 25.9375 24.1406L31.6406 15.1562Z" fill="#3F3EED" />
+                            </svg>
+                        </div>
+                        <h5 class="title">Messenger</h5>
+                        <p class="disc">
+                            Reach out to visitors proactively <br>
+                            to boost website engagement.
+                        </p>
+                        <a href="#">More Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- ingle service area end -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                    <!-- ingle service area start -->
+                    <div class="single-service-area-4">
+                        <div class="icon">
+                            <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg' %}">
+                                <path d="M7.34375 22.6875C7.34375 24.6406 5.625 26.3594 3.67188 26.3594C1.64062 26.3594 0 24.6406 0 22.6875C0 20.6562 1.64062 19.0156 3.67188 19.0156H7.34375V22.6875ZM9.14062 22.6875C9.14062 20.6562 10.8594 19.0156 12.8125 19.0156C14.8438 19.0156 16.4844 20.6562 16.4844 22.6875V31.8281C16.4844 33.8594 14.8438 35.5 12.8125 35.5C10.8594 35.5 9.14062 33.8594 9.14062 31.8281V22.6875ZM12.8125 7.92188C10.8594 7.92188 9.14062 6.20312 9.14062 4.25C9.14062 2.21875 10.8594 0.5 12.8125 0.5C14.8438 0.5 16.4844 2.21875 16.4844 4.25V7.92188H12.8125ZM12.8125 9.71875C14.8438 9.71875 16.4844 11.3594 16.4844 13.3906C16.4844 15.4219 14.8438 17.0625 12.8125 17.0625H3.67188C1.64062 17.0625 0 15.4219 0 13.3906C0 11.3594 1.64062 9.71875 3.67188 9.71875H12.8125ZM27.5781 13.3906C27.5781 11.3594 29.2969 9.71875 31.25 9.71875C33.2812 9.71875 35 11.3594 35 13.3906C35 15.4219 33.2812 17.0625 31.25 17.0625H27.5781V13.3906ZM25.7812 13.3906C25.7812 15.4219 24.1406 17.0625 22.1094 17.0625C20.0781 17.0625 18.4375 15.4219 18.4375 13.3906V4.25C18.4375 2.21875 20.0781 0.5 22.1094 0.5C24.1406 0.5 25.7812 2.21875 25.7812 4.25V13.3906ZM22.1094 28.1562C24.1406 28.1562 25.7812 29.875 25.7812 31.8281C25.7812 33.8594 24.1406 35.5 22.1094 35.5C20.0781 35.5 18.4375 33.8594 18.4375 31.8281V28.1562H22.1094ZM22.1094 26.3594C20.0781 26.3594 18.4375 24.6406 18.4375 22.6875C18.4375 20.6562 20.0781 19.0156 22.1094 19.0156H31.25C33.2812 19.0156 35 20.6562 35 22.6875C35 24.6406 33.2812 26.3594 31.25 26.3594H22.1094Z" fill="#3F3EED" />
+                            </svg>
+                        </div>
+                        <h5 class="title">Slack</h5>
+                        <p class="disc">
+                            Reach out to visitors proactively <br>
+                            to boost website engagement.
+                        </p>
+                        <a href="#">More Details <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- ingle service area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts sservice area end -->
+
+
+    <!-- rts core feature area start -->
+    <div class="rts-core-feature-area rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-main-center-4">
+                        <h2 class="title">
+                            What’s included: core features
+                        </h2>
+                        <p class="disc">
+                            Adjust the chat window design to fit your brand and style.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt--50">
+                <div class="col-xl-3 col-lg-6">
+                    <div class="left-area-core-feature-image">
+                        <img src="{% static 'ui/assets/images/case/09.png' %}" alt="case" loading="lazy">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="d-flex align-items-start">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                <div class="thumbnail-core-feature">
+                                    <img src="{% static 'ui/assets/images/case/ai chat.png' %}" alt="case-thumbnail" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                <div class="thumbnail-core-feature">
+                                    <img src="{% static 'ui/assets/images/case/sentiment analysis.png' %}" alt="case-thumbnail" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                                <div class="thumbnail-core-feature">
+                                    <img src="{% static 'ui/assets/images/case/custom ai.png' %}" alt="case-thumbnail" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-12 mt_md--30 mt_sm--30">
+                    <div class="nav feature-nav-btn flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <!-- single tabs button feature -->
+                            <div class="single-core-feature">
+                                <h6 class="title">AI Chatbot</h6>
+                                <p class="disc">You ask any question and provides instant, accurate responses whenever you need it.</p>
+                            </div>
+                            <!-- single tabs button feature end -->
+                        </div>
+                        <div class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <!-- single tabs button feature -->
+                            <div class="single-core-feature">
+                                <h6 class="title">Sentiment Analysis</h6>
+                                <p class="disc">You can interprets customer emotions and tones in conversations</p>
+                            </div>
+                            <!-- single tabs button feature end -->
+                        </div>
+                        <div class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                            <!-- single tabs button feature -->
+                            <div class="single-core-feature">
+                                <h6 class="title">Custom Chatbot</h6>
+                                <p class="disc">Build a chatbot customized to your business needs exactly how you envision.</p>
+                            </div>
+                            <!-- single tabs button feature end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts core feature area end -->
+
+    <!-- customers review area start -->
+    <div class="rts-tstimonials-area rts-section-gap bg-service-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-main-center-4">
+                        <h2 class="title">
+                            See why 500,000+ professionals <br>
+                            like you have chosen Foresightbyte
+                        </h2>
+                        <p class="disc">
+                            Top-rated on Trustpilot, G2, and AppSumo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="rwo">
+                <div class="col-lg-12">
+
+                </div>
+            </div>
+        </div>
+        <div class="container-full mt--50">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-testimonials-4">
+                        <div class="swiper mySwiper-t4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="" class="quote" loading="lazy">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/13.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="" class="quote" loading="lazy">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/16.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="image" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="images" class="quote" loading="lazy">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/11.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="team" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="image" class="quote" loading="lazy">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/12.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="image" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="image" class="quote">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/01.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="tream" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- single swiepr start -->
+                                    <div class="single-team-area">
+                                        <img src="{% static 'ui/assets/images/team/brand/quote.png' %}" alt="" class="quote" loading="lazy">
+                                        <div class="star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="disc">
+                                            I have used some AI writing tools liked Rytr, Peppertype, and Jasper but I found Writesonic to be the best for writing complete blog posts.
+                                        </p>
+                                        <div class="authore-area">
+                                            <div class="author">
+                                                <img src="{% static 'ui/assets/images/team/09.png' %}" alt="team" loading="lazy">
+                                                <div class="info">
+                                                    <p>Samuel</p>
+                                                    <span>Blogger</span>
+                                                </div>
+                                            </div>
+                                            <img src="{% static 'ui/assets/images/team/brand/01.png' %}" alt="img" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <!-- single swiepr end -->
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- customers review area end -->
+
+
+    <!-- rts latest update area start -->
+    <div class="rts-latest-update rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-main-center-4">
+                        <h2 class="title">
+                            Latest updates
+                        </h2>
+                        <p class="disc">
+                            Since 2002, we have been transforming the way <br>
+                            customers contact brands online.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt--30">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <!-- single blog area start -->
+                    <div class="single-blog-area-start">
+                        <a href="#" class="thumbnail">
+                            <img src="{% static 'ui/assets/images/blog/13.jpg' %}" alt="blog-area">
+                        </a>
+                        <div class="inner-content">
+                            <div class="meta-area">
+                                <div class="left">
+                                    <span class="name">ChatBot</span>
+                                    <span class="date">May 24, 2023</span>
+                                </div>
+                            </div>
+                            <a href="blog-details.html">
+                                <h5 class="title">Chatbot vs. Live Chat – Which is <br>
+                                    Better for Customer Service?</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single blog area end -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <!-- single blog area start -->
+                    <div class="single-blog-area-start">
+                        <a href="#" class="thumbnail">
+                            <img src="{% static 'ui/assets/images/blog/14.jpg' %}" alt="blog-area">
+                        </a>
+                        <div class="inner-content">
+                            <div class="meta-area">
+                                <div class="left">
+                                    <span class="name">ChatBot</span>
+                                    <span class="date">May 24, 2023</span>
+                                </div>
+                            </div>
+                            <a href="blog-details.html">
+                                <h5 class="title">10 Best Sales Chatbots to Boost Your Revenue in 2023</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single blog area end -->
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+                    <!-- single blog area start -->
+                    <div class="single-blog-area-start">
+                        <a href="#" class="thumbnail">
+                            <img src="{% static 'ui/assets/images/blog/15.jpg' %}" alt="blog-area">
+                        </a>
+                        <div class="inner-content">
+                            <div class="meta-area">
+                                <div class="left">
+                                    <span class="name">ChatBot</span>
+                                    <span class="date">May 24, 2023</span>
+                                </div>
+                            </div>
+                            <a href="blog-details.html">
+                                <h5 class="title">12 Essential Performance Metrics for Customer Service</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- single blog area end -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts latest update area end -->
+
+
+    <!-- blog area start -->
+    <div class="rts-faq-area pb--100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-conter-area">
+                        <h2 class="title">
+                            Foresightbyte chatbots: <br>
+                            Frequently asked questions
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt--60">
+                <div class="col-lg-12">
+                    <div class="accordion-area-one">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What services does Foresightbyte offer?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Foresightbyte specializes in building AI chatbots, sentiment analysis systems, and custom AI chatbots that can be tailored using your business's own data for personalized customer interactions.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How can an AI chatbot benefit my business?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        An AI chatbot can automate customer support, answer queries instantly, and engage with users 24/7, improving response times and customer satisfaction while reducing manual workload.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        What is sentiment analysis, and how does it work?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Sentiment analysis detects the emotional tone behind customer interactions, helping businesses understand how their customers feel and respond with appropriate, empathetic messages to improve user experience.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        Can I customize the chatbot to reflect my business needs?
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Yes! Foresightbyte offers custom AI chatbots that can be trained on your specific business data, allowing for personalized responses that align with your brand and customer expectations.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Is technical expertise required to set up the chatbot?
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        No technical expertise is needed. Our chatbots are easy to set up and integrate into your existing systems, and we provide full support to get you up and running quickly.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- blog area end -->
+
+    <!-- rts brand area start -->
+    <div class="rts-brand-area pb--100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="brand-area-4">
+                        <img src="{% static 'ui/assets/images/brand/01.png' %}" alt="brand-area">
+                        <img src="{% static 'ui/assets/images/brand/02.png' %}" alt="brand-area">
+                        <img src="{% static 'ui/assets/images/brand/03.png' %}" alt="brand-area">
+                        <img src="{% static 'ui/assets/images/brand/04.png' %}" alt="brand-area">
+                        <img src="{% static 'ui/assets/images/brand/05.png' %}" alt="brand-area">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts brand area end -->
+
+
+
+    <div class="rts-footer-area footer-two four footer-mid bg-footer">
+        <div class="container  ptb--100">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- footer main wrapper -->
+                    <div class="footer-one-main-wrapper">
+                        <!-- single sized  footer  -->
+                        <div class="footer-singl-wized left-logo">
+                            <div class="head">
+                                <a href="#">
+                                    <img src="{% static 'ui/assets/images/logo/logo3.png' %}" alt="logo">
+                                </a>
+                            </div>
+                            <div class="body">
+                                <h6 class="title">Newsletter Signup</h6>
+                                <div class="input-footer-4">
+                                    <input type="email" placeholder="Enter Your Email">
+                                    <button class="rts-btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single sized  footer end -->
+                        <!-- single sized  footer  -->
+                        <div class="footer-singl-wized">
+                            <div class="head">
+                                <h6 class="title">Company</h6>
+                            </div>
+                            <div class="body">
+                                <ul class="menu">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">Community</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                    <li><a href="#">Affiliate Program</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- single sized  footer end -->
+                        <!-- single sized  footer  -->
+                        <div class="footer-singl-wized">
+                            <div class="head">
+                                <h6 class="title">Use Cases</h6>
+                            </div>
+                            <div class="body">
+                                <ul class="menu">
+                                    <li><a href="#">For Teams</a></li>
+                                    <li><a href="#">For Email Marketers</a></li>
+                                    <li><a href="#">For Blog Writers</a></li>
+                                    <li><a href="#">For social managers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- single sized  footer end -->
+                        <!-- single sized  footer  -->
+                        <div class="footer-singl-wized input-area">
+                            <div class="head">
+                                <h6 class="title">Contact Info</h6>
+                            </div>
+                            <div class="body">
+                                <p class="disc">
+                                    Maxuel Street, Frankfurt <br> 2589 Germany.
+                                </p>
+                                <a href="#" class="f-link">
+                                    <h6 class="link">foresightbyte.com</h6>
+                                </a>
+                                <a href="#" class="number">+2858 62359 32159</a>
+                            </div>
+                        </div>
+                        <!-- single sized  footer end -->
+                    </div>
+                    <!-- footer main wrapper end -->
+                </div>
+            </div>
+        </div>
+        <div class="max-con border-copy">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copy-right-two four">
+                            <p><a href="#">Foresightbyte Infotech</a> 2024. All Rights Reserved.</p>
+                            <div class="menu">
+                                <ul>
+                                    <li><a href="#">Tearms</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="anywhere-home" class="">
+    </div>
+
+    <!-- right switcher -->
+    <!-- <div class="modal-sidebar-scroll rts-dark-light">
+        <ul>
+            <li><a href="https://themewant.com/products/html/openup/dark"><span>Dark</span><i class="rts-go-dark fal fa-moon"></i></a></li>
+            <li><a href="https://themewant.com/products/html/openup-rtl"><span>RTL</span><i class="fa-solid fa-paragraph-left"></i></a></li>
+        </ul>
+    </div> -->
+    <!-- right switcher end -->
+
+    <!-- header style two -->
+    <div id="side-bar" class="side-bar header-two">
+        <button class="close-icon-menu"><i class="far fa-times"></i></button>
+
+        <!-- mobile menu area start -->
+        <div class="mobile-menu-main">
+            <nav class="nav-main mainmenu-nav mt--30">
+                <ul class="mainmenu metismenu" id="mobile-menu-active">
+                    <li class="parent">
+                        <a href="{% url 'welcome' %}" class="main">Home</a>
+                    </li>
+                    <li class="has-droupdown parent">
+                        <a href="#" class="main">Feature</a>
+                        <ul class="submenu mm-collapse">
+                            <li><a class="mobile-menu-link" href="{% url 'chatui' %}">AI Chat</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'sentimentui' %}">Sentiment Analysis</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-droupdown parent">
+                        <a href="#" class="main">Pages</a>
+                        <ul class="submenu mm-collapse">
+                            <li><a class="mobile-menu-link" href="{% url 'service' %}">services</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'about' %}">About Us</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'blog' %}">Blog</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'contact' %}">Contact</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'price' %}">Pricing</a></li>
+                            <li><a class="mobile-menu-link" href="{% url 'faq' %}">FAQ</a></li>
+                            <li><a class="mobile-menu-link auth-buttons" href="{% url 'login' %}">Log In</a></li>
+                            <li><a class="mobile-menu-link auth-buttons" href="{% url 'registration' %}">Registration</a></li>
+                            <li><a class="mobile-menu-link auth-buttons" href="{% url 'reset' %}">Reset</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="rts-social-style-one pl--20 mt--100">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- mobile menu area end -->
+    </div>
+    <!-- header style two End -->
+
+
+    <!-- rts backto top start -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+    <!-- rts backto top end -->
+
+
+    <script src="{% static 'ui/assets/js/vendor/jquery.min.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/vendor/metismenu.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/vendor/imagesloaded.pkgd.min.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/vendor/isotope.pkgd.min.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/vendor/magnific-popup.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/plugins/bootstrap.min.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/plugins/swiper.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/plugins/contact.form.js' %}" defer></script>
+    <script src="{% static 'ui/assets/js/main.js' %}" defer></script>
+    <script type="module" src="{% static 'firebase.js' %}" defer></script>
+</body>
+
+
+<!-- Mirrored from openup-html.vercel.app/openup-landing/openup-main/index-four.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Oct 2024 05:21:10 GMT -->
+</html>

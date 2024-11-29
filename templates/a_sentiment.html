@@ -1,0 +1,89 @@
+{% extends 'chatbase.html' %}
+{% load static %}
+
+
+{% block chatbody %}
+<div class="main-center-content-m-left center-content search-sticky">
+    <div class="audio-main-generator-start">
+        <div id="report_dynamic_field" class="text-center mb-5">
+
+        </div>
+        <form action="#">
+            <div class="ask-for-audio">
+                <textarea name="tynChatInput" id="tynChatInput"
+                 placeholder="Here write text" ></textarea>
+                <i class="fa-light fa-pen-to-square"></i>
+                <div class="button-wrapper-generator">
+                    <button id="chatbtn" class="rts-btn btn-primary w-100">Generate
+                        
+                    </button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+   
+
+
+</div>
+{% endblock chatbody %}
+
+
+   
+{% block js%}
+<script>
+    $(document).ready(function () {
+        $('#chatbtn').click(function (event) {
+            event.preventDefault(); // Prevent form submission and page refresh
+            
+            var user_input = $("#tynChatInput").val();
+            $("#tynChatInput").val(""); // Clear the input field after submission
+            var firstValue = 0; // Initialize firstValue
+            
+            // Display user input in the chat area
+            $('#report_dynamic_field').html(
+                '<div class="tyn-qa-item">' +
+                    '<div class="tyn-qa-message tyn-text-block">' +
+                        'Text: ' + user_input +
+                    '</div>' +
+                '</div>'
+            );
+
+            $.ajax({
+                url: "{% url 'sentiment_add' %}",
+                type: 'get',
+                dataType: 'json',
+                data: {
+                    offset: user_input,
+                    firstValue: firstValue
+                },
+                success: function(response) {
+                    console.log(response);
+                    firstValue = 4; // Update firstValue if needed
+                    
+                    // Replace the chatbot response in the chat area
+                    $('#report_dynamic_field').html(
+                        '<div class="tyn-qa-item">' +
+                            '<div class="tyn-qa-message tyn-text-block">' +
+                                'Text: ' + user_input +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="tyn-qa-item mb-3">' +
+                            '<div class="tyn-qa-message tyn-text-block">' +
+                                '<p>' + response.data.chatbot_response + '</p>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                },
+                error: function() {
+                    alert('Error loading more content.');
+                }
+            });
+        });
+    });
+</script>
+
+  
+
+{% endblock js%}

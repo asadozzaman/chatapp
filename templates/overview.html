@@ -1,0 +1,413 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block body %}
+    <div class="relative px-3 py-10">
+                <div class="container px-3">
+                    <div class="-mx-3 mb-7 flex items-center justify-between">
+                        <div class="px-3">
+                            <h2 class="mb-2 text-xl font-bold text-slate-700 dark:text-white"> Overview </h2>
+                            <ul class="inline-flex items-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-300">
+                                <li>
+                                    <a href="https://scribbler-html.themeyn.com/index.html" class="text-blue-500 hover:text-blue-700"> Home </a>
+                                </li>
+                                <li class="mt-0.5 inline-flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-2 w-2">
+                                        <path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                                    </svg>
+                                </li>
+                                <li>Phillip Burke</li>
+                            </ul>
+                        </div>
+                        <div class="px-3">
+                            <a href="templates.html" class="inline-flex items-center justify-center gap-3 rounded-md bg-blue-600 px-5 py-2 text-sm font-medium text-white transition-all hover:bg-blue-800"> Create New </a>
+                        </div>
+                    </div>
+                    <!-- Page Head -->
+                    <div class="-m-3 flex flex-wrap">
+                        <div class="w-full p-3 xs:w-1/2 lg:w-1/4">
+                            <div class="h-full rounded-md border border-slate-800 bg-slate-800 p-5">
+                                <div class="relative isolate flex h-full flex-col">
+                                    <div class="absolute end-0 top-0"></div>
+                                    <div class="mb-auto">
+                                        <h6 class="w-max bg-gradient-to-r from-blue-300 to-pink-500 bg-clip-text text-xl font-bold text-transparent"> Welcome </h6>
+                                        <div class="mt-2 text-sm font-bold text-white"> Mr. Phillip Burke </div>
+                                    </div>
+                                    <div class="mt-4 flex gap-x-6">
+                                        <div>
+                                            <div class="mt-1 text-xs text-slate-300">Words Available</div>
+                                            <div class="mt-1 text-base font-bold text-slate-100"> 48,610 </div>
+                                        </div>
+                                        <div>
+                                            <div class="mt-1 text-xs text-slate-300">Image Credit</div>
+                                            <div class="mt-1 text-base font-bold text-slate-100">1987</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                        <div class="w-full p-3 xs:w-1/2 lg:w-1/4">
+                            <div class="h-full rounded-md border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
+                                <div class="relative isolate flex flex-col">
+                                    <div class="absolute end-0 top-0"></div>
+                                    <div class="relative -z-10 -mb-8 h-16 opacity-30">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                            <path class="fill-blue-300" d="M3 5C3 3.34315 4.34315 2 6 2H15.7574C16.553 2 17.3161 2.31607 17.8787 2.87868L20.1213 5.12132C20.6839 5.68393 21 6.44699 21 7.24264V19C21 20.6569 19.6569 22 18 22H6C4.34315 22 3 20.6569 3 19V5Z" />
+                                            <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 11C7 10.4477 7.44772 10 8 10H16C16.5523 10 17 10.4477 17 11C17 11.5523 16.5523 12 16 12H8C7.44772 12 7 11.5523 7 11Z" />
+                                            <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 15C7 14.4477 7.44772 14 8 14H12C12.5523 14 13 14.4477 13 15C13 15.5523 12.5523 16 12 16H8C7.44772 16 7 15.5523 7 15Z" />
+                                            <path class="fill-blue-600" d="M17.7071 2.70711L20.2929 5.29289C20.7456 5.74565 21 6.35971 21 7H18C16.8954 7 16 6.10457 16 5V2C16.6403 2 17.2544 2.25435 17.7071 2.70711Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ms-1 mt-2">
+                                        <p class="-ms-0.5 flex items-baseline gap-x-2">
+                                            <span class="text-4xl font-bold tracking-tight text-blue-500">132</span>
+                                            <span class="text-sm font-semibold leading-6 tracking-wide text-slate-500 dark:text-slate-400">This Month</span>
+                                        </p>
+                                        <h6 class="text-md mb-1 font-bold text-slate-700 dark:text-white"> Document Created </h6>
+                                        <a href="template-writer.html" class="text-sm font-medium text-blue-600 hover:text-blue-800">Create Document</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                        <div class="w-full p-3 xs:w-1/2 lg:w-1/4">
+                            <div class="h-full rounded-md border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
+                                <div class="relative isolate flex flex-col">
+                                    <div class="absolute end-0 top-0"></div>
+                                    <div class="relative -z-10 -mb-8 h-16 opacity-30">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                            <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M19.7866 14C20.9581 14 22 13.1714 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C13.1714 22 14 20.9581 14 19.7866V18C14 15.7909 15.7909 14 18 14H19.7866Z" />
+                                            <circle class="fill-blue-600" cx="11.5" cy="6" r="1.5" />
+                                            <circle class="fill-blue-600" cx="17.5" cy="9.5" r="1.5" />
+                                            <circle class="fill-blue-600" cx="6.5" cy="10" r="1.5" />
+                                            <circle class="fill-blue-600" cx="8" cy="16.5" r="1.5" />
+                                        </svg>
+                                    </div>
+                                    <div class="ms-1 mt-2">
+                                        <p class="-ms-0.5 flex items-baseline gap-x-2">
+                                            <span class="text-4xl font-bold tracking-tight text-blue-500">28</span>
+                                            <span class="text-sm font-semibold leading-6 tracking-wide text-slate-500 dark:text-slate-400">This Month</span>
+                                        </p>
+                                        <h6 class="text-md mb-1 font-bold text-slate-700 dark:text-white"> Image Created </h6>
+                                        <a href="template-image.html" class="text-sm font-medium text-blue-600 hover:text-blue-800">Create Image</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                        <div class="w-full p-3 xs:w-1/2 lg:w-1/4">
+                            <div class="h-full rounded-md border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-950">
+                                <div class="relative isolate flex flex-col">
+                                    <div class="absolute end-0 top-0">
+                                        <div class="rounded bg-gradient-to-r from-blue-600 to-pink-500 px-2 py-0.5 text-[11px] font-medium text-white"> Premium </div>
+                                    </div>
+                                    <div class="relative -z-10 -mb-8 h-16 opacity-30">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                            <path class="fill-blue-300" d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V16C22 17.6569 20.6569 19 19 19H8L5.28037 21.2664C3.97771 22.3519 2 21.4256 2 19.7299V6Z" />
+                                            <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 9C7 8.44772 7.44772 8 8 8H16C16.5523 8 17 8.44772 17 9C17 9.55228 16.5523 10 16 10H8C7.44772 10 7 9.55228 7 9Z" />
+                                            <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 13C7 12.4477 7.44772 12 8 12H12C12.5523 12 13 12.4477 13 13C13 13.5523 12.5523 14 12 14H8C7.44772 14 7 13.5523 7 13Z" />
+                                        </svg>
+                                    </div>
+                                    <div class="ms-1 mt-2">
+                                        <p class="-ms-0.5 flex items-baseline gap-x-2">
+                                            <span class="text-4xl font-bold tracking-tight text-blue-500">289</span>
+                                            <span class="text-sm font-semibold leading-6 tracking-wide text-slate-500 dark:text-slate-400">This Month</span>
+                                        </p>
+                                        <h6 class="text-md mb-1 font-bold text-slate-700 dark:text-white"> Chat Session </h6>
+                                        <a href="template-chatbot.html" class="text-sm font-medium text-blue-600 hover:text-blue-800">Chat Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                        <div class="w-full p-3 lg:w-2/5">
+                            <div class="h-full rounded-md border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+                                <div class="relative isolate flex flex-col">
+                                    <div class="p-5 pb-2">
+                                        <h6 class="text-md mb-1 font-bold text-slate-700 dark:text-white"> Usage Overview </h6>
+                                        <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">By Words per day</span>
+                                    </div>
+                                    <div class="h-48 w-full px-5 pb-1">
+                                        <canvas class="line-chart" id="usageOverview"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                        <div class="w-full p-3 lg:w-3/5">
+                            <div class="h-full rounded-md border border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+                                <div class="relative isolate flex flex-col">
+                                    <div class="flex items-center justify-between gap-x-4 p-5">
+                                        <h6 class="text-md font-bold text-slate-700 dark:text-white"> Recent Documents </h6>
+                                        <a href="documents.html" class="text-sm font-medium text-blue-600 hover:text-blue-800">View All</a>
+                                    </div>
+                                    <div class="overflow-x-auto scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-600 dark:scrollbar-track-slate-800">
+                                        <table class="w-full table-auto border-collapse border-t border-slate-200 text-sm dark:border-slate-800">
+                                            <thead class="text-slate-600 dark:text-slate-200">
+                                                <tr>
+                                                    <th class="px-5 py-2 text-start">Document</th>
+                                                    <th class="px-5 py-2 text-start">Created</th>
+                                                    <th class="sticky end-0 bg-white dark:bg-slate-950"></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <div class="flex items-center">
+                                                            <span class="block h-6 w-6">
+                                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                                                    <path class="fill-blue-300" d="M13.7087 3.30729C12.6049 2.90591 11.395 2.90591 10.2913 3.30729L3.24266 5.87042C1.48732 6.50872 1.4873 8.99128 3.24266 9.62959L10.2913 12.1927C11.395 12.5941 12.6049 12.5941 13.7087 12.1927L20.7573 9.62959C22.5126 8.99128 22.5126 6.50873 20.7573 5.87042L13.7087 3.30729Z" />
+                                                                    <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 12.395C2.24283 11.8746 2.81467 11.6028 3.33504 11.7878L11.33 14.6304C11.7634 14.7845 12.2367 14.7845 12.67 14.6304L20.665 11.7878C21.1854 11.6028 21.7572 11.8746 21.9422 12.395C22.1273 12.9154 21.8554 13.4872 21.335 13.6722L13.3401 16.5149C12.4733 16.8231 11.5268 16.8231 10.66 16.5149L2.66502 13.6722C2.14465 13.4872 1.87279 12.9154 2.05781 12.395Z" />
+                                                                    <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 16.645C2.24283 16.1246 2.81467 15.8528 3.33504 16.0378L11.33 18.8804C11.7634 19.0345 12.2367 19.0345 12.67 18.8804L20.665 16.0378C21.1854 15.8528 21.7572 16.1246 21.9422 16.645C22.1273 17.1654 21.8554 17.7372 21.335 17.9222L13.3401 20.7649C12.4733 21.0731 11.5268 21.0731 10.66 20.7649L2.66502 17.9222C2.14465 17.7372 1.87279 17.1654 2.05781 16.645Z" />
+                                                                </svg>
+                                                            </span>
+                                                            <div class="ms-3">
+                                                                <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200"> 10 React Best practices </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200">April 3th 2023</span>
+                                                        <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">06:32 PM</span>
+                                                    </td>
+                                                    <td class="sticky end-0 border-t border-slate-200 bg-white px-5 py-3 dark:border-slate-800 dark:bg-slate-950">
+                                                        <ul class="flex justify-end gap-2">
+                                                            <li>
+                                                                <a href="document-edit.html" class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-blue-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-blue-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                                    </svg><!-- eye - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-rose-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-rose-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                                                    </svg><!-- trash - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <!-- tr -->
+                                                <tr>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <div class="flex items-center">
+                                                            <span class="block h-6 w-6">
+                                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                                                    <path class="fill-blue-300" d="M13.7087 3.30729C12.6049 2.90591 11.395 2.90591 10.2913 3.30729L3.24266 5.87042C1.48732 6.50872 1.4873 8.99128 3.24266 9.62959L10.2913 12.1927C11.395 12.5941 12.6049 12.5941 13.7087 12.1927L20.7573 9.62959C22.5126 8.99128 22.5126 6.50873 20.7573 5.87042L13.7087 3.30729Z" />
+                                                                    <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 12.395C2.24283 11.8746 2.81467 11.6028 3.33504 11.7878L11.33 14.6304C11.7634 14.7845 12.2367 14.7845 12.67 14.6304L20.665 11.7878C21.1854 11.6028 21.7572 11.8746 21.9422 12.395C22.1273 12.9154 21.8554 13.4872 21.335 13.6722L13.3401 16.5149C12.4733 16.8231 11.5268 16.8231 10.66 16.5149L2.66502 13.6722C2.14465 13.4872 1.87279 12.9154 2.05781 12.395Z" />
+                                                                    <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 16.645C2.24283 16.1246 2.81467 15.8528 3.33504 16.0378L11.33 18.8804C11.7634 19.0345 12.2367 19.0345 12.67 18.8804L20.665 16.0378C21.1854 15.8528 21.7572 16.1246 21.9422 16.645C22.1273 17.1654 21.8554 17.7372 21.335 17.9222L13.3401 20.7649C12.4733 21.0731 11.5268 21.0731 10.66 20.7649L2.66502 17.9222C2.14465 17.7372 1.87279 17.1654 2.05781 16.645Z" />
+                                                                </svg>
+                                                            </span>
+                                                            <div class="ms-3">
+                                                                <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200"> Cowboy hourse riding on the moon </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200">April 3th 2023</span>
+                                                        <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">06:32 PM</span>
+                                                    </td>
+                                                    <td class="sticky end-0 border-t border-slate-200 bg-white px-5 py-3 dark:border-slate-800 dark:bg-slate-950">
+                                                        <ul class="flex justify-end gap-2">
+                                                            <li>
+                                                                <a href="document-edit.html" class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-blue-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-blue-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                                    </svg><!-- eye - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-rose-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-rose-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                                                    </svg><!-- trash - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <!-- tr -->
+                                                <tr>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <div class="flex items-center">
+                                                            <span class="block h-6 w-6">
+                                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                                                    <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M16.2929 16.7071C15.9024 16.3166 15.9024 15.6834 16.2929 15.2929L19.5858 12L16.2929 8.7071C15.9024 8.31657 15.9024 7.68341 16.2929 7.29289C16.6834 6.90236 17.3166 6.90236 17.7071 7.29289L21.7071 11.2929C22.0976 11.6834 22.0976 12.3166 21.7071 12.7071L17.7071 16.7071C17.3166 17.0976 16.6834 17.0976 16.2929 16.7071Z" />
+                                                                    <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 16.7071C8.09763 16.3166 8.09763 15.6834 7.70711 15.2929L4.41421 12L7.70711 8.7071C8.09763 8.31657 8.09763 7.68341 7.70711 7.29289C7.31658 6.90236 6.68342 6.90236 6.29289 7.29289L2.29289 11.2929C1.90237 11.6834 1.90237 12.3166 2.29289 12.7071L6.29289 16.7071C6.68342 17.0976 7.31658 17.0976 7.70711 16.7071Z" />
+                                                                    <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M14.2747 4.03849C13.7437 3.88677 13.1902 4.19426 13.0385 4.72529L9.03846 18.7253C8.88674 19.2563 9.19423 19.8098 9.72527 19.9615C10.2563 20.1133 10.8098 19.8058 10.9615 19.2747L14.9615 5.27473C15.1132 4.7437 14.8057 4.19021 14.2747 4.03849Z" />
+                                                                </svg>
+                                                            </span>
+                                                            <div class="ms-3">
+                                                                <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200"> Write a useEffect function with clean up </span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="border-t border-slate-200 px-5 py-3 dark:border-slate-800">
+                                                        <span class="block whitespace-nowrap text-xs font-bold text-slate-600 dark:text-slate-200">April 3th 2023</span>
+                                                        <span class="block text-[11px] font-medium text-slate-500 dark:text-slate-400">06:32 PM</span>
+                                                    </td>
+                                                    <td class="sticky end-0 border-t border-slate-200 bg-white px-5 py-3 dark:border-slate-800 dark:bg-slate-950">
+                                                        <ul class="flex justify-end gap-2">
+                                                            <li>
+                                                                <a href="document-edit.html" class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-blue-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-blue-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                                    </svg><!-- eye - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="inline-flex items-center justify-center rounded-full bg-slate-200 p-2 text-slate-600 transition-all hover:bg-rose-600 hover:text-white dark:bg-slate-800 dark:text-slate-200 hover:dark:bg-rose-600 hover:dark:text-white">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                                                                    </svg><!-- trash - outline - heroicons  -->
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <!-- tr -->
+                                            </tbody>
+                                        </table>
+                                        <!-- table -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card -->
+                        </div>
+                        <!-- col -->
+                    </div>
+                    <!-- row -->
+                    <div class="-mx-3 mb-4 mt-8 flex items-center justify-between">
+                        <div class="px-3">
+                            <h2 class="mb-2 text-xl font-bold text-slate-700 dark:text-white"> Our Awesome Tools </h2>
+                        </div>
+                        <div class="px-3">
+                            <a href="templates.html" class="text-sm font-medium text-blue-600 hover:text-blue-800">View All</a>
+                        </div>
+                    </div>
+                    <!-- head -->
+                    <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+                        <a href="template-writer026f.html?tab=article-generator" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" d="M13.7087 3.30729C12.6049 2.90591 11.395 2.90591 10.2913 3.30729L3.24266 5.87042C1.48732 6.50872 1.4873 8.99128 3.24266 9.62959L10.2913 12.1927C11.395 12.5941 12.6049 12.5941 13.7087 12.1927L20.7573 9.62959C22.5126 8.99128 22.5126 6.50873 20.7573 5.87042L13.7087 3.30729Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 12.395C2.24283 11.8746 2.81467 11.6028 3.33504 11.7878L11.33 14.6304C11.7634 14.7845 12.2367 14.7845 12.67 14.6304L20.665 11.7878C21.1854 11.6028 21.7572 11.8746 21.9422 12.395C22.1273 12.9154 21.8554 13.4872 21.335 13.6722L13.3401 16.5149C12.4733 16.8231 11.5268 16.8231 10.66 16.5149L2.66502 13.6722C2.14465 13.4872 1.87279 12.9154 2.05781 12.395Z" />
+                                        <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M2.05781 16.645C2.24283 16.1246 2.81467 15.8528 3.33504 16.0378L11.33 18.8804C11.7634 19.0345 12.2367 19.0345 12.67 18.8804L20.665 16.0378C21.1854 15.8528 21.7572 16.1246 21.9422 16.645C22.1273 17.1654 21.8554 17.7372 21.335 17.9222L13.3401 20.7649C12.4733 21.0731 11.5268 21.0731 10.66 20.7649L2.66502 17.9222C2.14465 17.7372 1.87279 17.1654 2.05781 16.645Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Article Generator </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Article Generator uses advanced algorithms to automatically create articles, saving effort for writers and marketers. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-writerb31e.html?tab=rewrite-article" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" d="M12.9227 14.118C13.3783 15.2569 14.4814 16.0038 15.7081 16.0038H18.5867L17.7929 15.21C17.4024 14.8195 17.4024 14.1863 17.7929 13.7958C18.1834 13.4053 18.8166 13.4053 19.2071 13.7958L21.352 15.9407C21.9378 16.5265 21.9378 17.4762 21.352 18.062L19.2071 20.207C18.8166 20.5975 18.1834 20.5975 17.7929 20.207C17.4024 19.8165 17.4024 19.1833 17.7929 18.7928L18.5819 18.0038H15.7081C13.6636 18.0038 11.8251 16.759 11.0657 14.8607L9.0773 9.88961C8.62171 8.75064 7.51858 8.00378 6.29187 8.00378H3C2.44772 8.00378 2 7.55607 2 7.00378C2 6.4515 2.44772 6.00378 3 6.00378H6.29187C8.33639 6.00378 10.1749 7.24854 10.9343 9.14683L12.9227 14.118Z" />
+                                        <path class="fill-blue-600" d="M19.2071 3.79302C18.8166 3.40249 18.1834 3.40249 17.7929 3.79301C17.4024 4.18353 17.4024 4.8167 17.7929 5.20722L18.5819 5.99622H15.7081C13.6636 5.99622 11.8251 7.24097 11.0657 9.13926L9.0773 14.1104C8.62171 15.2494 7.51858 15.9962 6.29187 15.9962H3C2.44772 15.9962 2 16.4439 2 16.9962C2 17.5485 2.44772 17.9962 3 17.9962H6.29187C8.33639 17.9962 10.1749 16.7515 10.9343 14.8532L12.9227 9.88204C13.3783 8.74307 14.4814 7.99622 15.7081 7.99622H18.5867L17.7929 8.79005C17.4024 9.18057 17.4024 9.81374 17.7929 10.2043C18.1834 10.5948 18.8166 10.5948 19.2071 10.2042L21.352 8.05928C21.9378 7.47349 21.9378 6.52376 21.352 5.93797L19.2071 3.79302Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Rewrite Article </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Instructions to paraphrase an article while preserving its meaning, structure, and tone without infringing on plagiarism. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-writer241a.html?tab=tags-generator" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" d="M20.6811 13.2434C21.3004 12.6241 21.6181 11.7652 21.5509 10.892L21.1469 5.63919C21.0334 4.16385 19.8611 2.99161 18.3858 2.87812L13.133 2.47406C12.2598 2.40689 11.4009 2.72463 10.7816 3.3439L3.27199 10.8535C2.10042 12.0251 2.10042 13.9246 3.27199 15.0962L8.92884 20.753C10.1004 21.9246 11.9999 21.9246 13.1715 20.753L20.6811 13.2434Z" />
+                                        <path class="fill-blue-600" d="M14.5857 7.318C13.9999 7.90379 13.9999 8.85354 14.5857 9.43932C15.1715 10.0251 16.1212 10.0251 16.707 9.43932C17.2928 8.85354 17.2928 7.90379 16.707 7.318C16.1212 6.73222 15.1715 6.73222 14.5857 7.318Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7.51469 13.682L10.3431 16.5104C10.7336 16.9009 11.3668 16.9009 11.7573 16.5104C12.1479 16.1199 12.1479 15.4867 11.7573 15.0962L8.92891 12.2677C8.53838 11.8772 7.90522 11.8772 7.5147 12.2677C7.12417 12.6583 7.12417 13.2914 7.51469 13.682Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Tags Generator </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> A tool that generates relevant and popular tags for online content, such as blog posts, videos, and social media. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-writer40f7.html?tab=ads-content" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" d="M11 4.99999C11 4.4477 10.5509 3.99424 10.002 4.05548C8.57508 4.21469 7.20175 4.7137 5.99987 5.51676C4.51983 6.50569 3.36628 7.9113 2.68509 9.55584C2.0039 11.2004 1.82567 13.01 2.17294 14.7558C2.5202 16.5016 3.37737 18.1053 4.63604 19.3639C5.89472 20.6226 7.49836 21.4798 9.24419 21.8271C10.99 22.1743 12.7996 21.9961 14.4442 21.3149C16.0887 20.6337 17.4943 19.4802 18.4832 18.0001C19.2863 16.7982 19.7853 15.4249 19.9445 13.9979C20.0057 13.4491 19.5523 13 19 13H15.0079C14.4556 13 14.0234 13.4596 13.8432 13.9817C13.7596 14.2239 13.6449 14.4557 13.501 14.6711C13.1705 15.1657 12.7007 15.5513 12.1511 15.7789C11.6015 16.0066 10.9967 16.0661 10.4132 15.9501C9.82972 15.834 9.29376 15.5476 8.8731 15.1269C8.45244 14.7062 8.16597 14.1703 8.04991 13.5868C7.93385 13.0033 7.99341 12.3985 8.22107 11.8489C8.44873 11.2993 8.83426 10.8295 9.32891 10.499C9.54426 10.3551 9.77608 10.2404 10.0183 10.1568C10.5404 9.97655 11 9.54438 11 8.99209V4.99999Z" />
+                                        <path class="fill-blue-600" d="M21 11C21.5523 11 22.0057 10.5509 21.9445 10.002C21.8509 9.16274 21.6394 8.33912 21.3149 7.55583C20.8626 6.4639 20.1997 5.47175 19.364 4.63602C18.5282 3.8003 17.5361 3.13736 16.4442 2.68507C15.6609 2.36062 14.8372 2.14912 13.9979 2.05548C13.4491 1.99424 13 2.4477 13 2.99998V6.99209C13 7.54438 13.4596 7.97655 13.9817 8.1568C14.0387 8.17648 14.0952 8.19791 14.1511 8.22105C14.516 8.37221 14.8476 8.59377 15.1269 8.87308C15.4062 9.15239 15.6278 9.48398 15.7789 9.84891C15.8021 9.90479 15.8235 9.96128 15.8432 10.0183C16.0234 10.5403 16.4556 11 17.0079 11H21Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Ads Content </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Automatically creates advertising copy any platforms, such as Google, Facebook, and Instagram, to attract customers. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-image.html" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M19.7866 14C20.9581 14 22 13.1714 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C13.1714 22 14 20.9581 14 19.7866V18C14 15.7909 15.7909 14 18 14H19.7866Z" />
+                                        <circle class="fill-blue-600" cx="11.5" cy="6" r="1.5" />
+                                        <circle class="fill-blue-600" cx="17.5" cy="9.5" r="1.5" />
+                                        <circle class="fill-blue-600" cx="6.5" cy="10" r="1.5" />
+                                        <circle class="fill-blue-600" cx="8" cy="16.5" r="1.5" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Image Generator </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Generates images using algorithms, machine learning, or other techniques, often used for creative or practical purposes. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-chatbot.html" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-300" d="M2 6C2 4.34315 3.34315 3 5 3H19C20.6569 3 22 4.34315 22 6V16C22 17.6569 20.6569 19 19 19H8L5.28037 21.2664C3.97771 22.3519 2 21.4256 2 19.7299V6Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 9C7 8.44772 7.44772 8 8 8H16C16.5523 8 17 8.44772 17 9C17 9.55228 16.5523 10 16 10H8C7.44772 10 7 9.55228 7 9Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M7 13C7 12.4477 7.44772 12 8 12H12C12.5523 12 13 12.4477 13 13C13 13.5523 12.5523 14 12 14H8C7.44772 14 7 13.5523 7 13Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> AI Chat Bot </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> An AI Simulates human conversation through text or voice interfaces, often used for customer service or information retrieval. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-writerad0b.html?tab=write-title" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M4 6C4 5.44772 4.44772 5 5 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H5C4.44772 7 4 6.55228 4 6Z" />
+                                        <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M4 12C4 11.4477 4.44772 11 5 11H15C15.5523 11 16 11.4477 16 12C16 12.5523 15.5523 13 15 13H5C4.44772 13 4 12.5523 4 12Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M4 18C4 17.4477 4.44772 17 5 17H11C11.5523 17 12 17.4477 12 18C12 18.5523 11.5523 19 11 19H5C4.44772 19 4 18.5523 4 18Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Write Title </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Creates compelling written content that accurately and creatively describes AI products, highlighting their unique features and benefits. </p>
+                        </a><!-- grid-item -->
+                        <a href="template-writered1b.html?tab=write-description" class="rounded-lg border border-slate-200 bg-white p-5 transition-all hover:border-blue-600 hover:ring-1 hover:ring-blue-600 dark:border-slate-800 dark:bg-slate-950">
+                            <div class="mb-3 flex items-center gap-x-3">
+                                <div class="h-6">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full">
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M3 6C3 5.44772 3.44772 5 4 5H20C20.5523 5 21 5.44772 21 6C21 6.55228 20.5523 7 20 7H4C3.44772 7 3 6.55228 3 6Z" />
+                                        <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M3 10C3 9.44772 3.44772 9 4 9H14C14.5523 9 15 9.44772 15 10C15 10.5523 14.5523 11 14 11H4C3.44772 11 3 10.5523 3 10Z" />
+                                        <path class="fill-blue-600" fill-rule="evenodd" clip-rule="evenodd" d="M3 14C3 13.4477 3.44772 13 4 13H20C20.5523 13 21 13.4477 21 14C21 14.5523 20.5523 15 20 15H4C3.44772 15 3 14.5523 3 14Z" />
+                                        <path class="fill-blue-300" fill-rule="evenodd" clip-rule="evenodd" d="M3 18C3 17.4477 3.44772 17 4 17H14C14.5523 17 15 17.4477 15 18C15 18.5523 14.5523 19 14 19H4C3.44772 19 3 18.5523 3 18Z" />
+                                    </svg>
+                                </div>
+                                <h6 class="text-lg font-bold text-slate-700 dark:text-white"> Write Description </h6>
+                            </div>
+                            <p class="line-clamp-3 text-sm text-slate-500 dark:text-slate-400"> Description Writer is a tool that generates concise, informative summaries on various topics, providing key details efficiently and effectively. </p>
+                        </a><!-- grid-item -->
+                    </div>
+                    <!-- grid -->
+                </div>
+                <!-- container -->
+            </div>
+
+{% endblock body %}

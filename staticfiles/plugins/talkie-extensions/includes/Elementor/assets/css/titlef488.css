@@ -1,0 +1,70 @@
+/*---------------------------------------------------------------------
+                         Section Title
+-----------------------------------------------------------------------*/
+.title-box span {
+    font-family: var(--highlight-font-family);
+    color: var(--color-theme-primary);
+    display: inline-block;
+}
+
+.title-box .title {
+    margin-bottom: 0;
+}
+
+.title-box p.description {
+    margin-top: 22px;
+    margin-bottom: 0;
+}
+
+/* Title Box Text Left*/
+.title-box.text-center p {
+    margin: 0;
+}
+
+.title-box{
+    margin-bottom: 0;
+}
+
+.sub-title {
+    font-family: var(--decorate-font-famil);
+    font-size: var(--font-size-normal);
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.new-title-box{
+    margin-bottom:45px;
+}
+
+.new-title-box.left,
+.new-title-box.right{
+   margin-bottom: 35px;
+}
+
+.new-title-box .sub-title{
+    font-style: italic;
+}
+.new-title-box .sub-title.has-border::before {
+    left: 0;
+    right: auto;
+}
+.new-title-box .sub-title.has-border::after {
+    left: auto;
+    right: 0;
+}
+.new-title-box .sub-title.has-border{
+    position: relative;
+    padding: 0 24px;
+}
+.new-title-box .sub-title.has-border::before,
+.new-title-box .sub-title.has-border::after {
+    position: absolute;
+    content: "";
+    background-color: var(--color-theme-primary);
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 16px;
+}

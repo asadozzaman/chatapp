@@ -1,0 +1,54 @@
+.css_prefix-grid{
+    position: relative;
+    margin-bottom: 30px;
+}
+.css_prefix-grid .css_prefix-portfolio-img img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.css_prefix-grid  .css_prefix-masonry-item .css_prefix-portfolio-info{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    background: var(--color-theme-white);
+    padding: 20px 35px 20px 30px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.css_prefix-grid  .css_prefix-masonry-item:hover .css_prefix-portfolio-info {
+    left: 30px;
+    opacity: 1;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.portfolio-container .iq-grid-five .iq-column {
+	width: 20%;
+	padding: 0 16px;
+}
+
+@media (max-width: 1199px){
+    .portfolio-container .iq-grid-five .iq-column {
+        width: 25%;
+    }   
+}
+@media (max-width: 992px){
+    .portfolio-container .iq-grid-five .iq-column {
+        width: 50%;
+    }   
+}
+@media (max-width: 767px){
+    .portfolio-container .iq-grid-five .iq-column {
+        width: 100%;
+    }   
+}
+
+
+
+

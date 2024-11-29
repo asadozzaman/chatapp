@@ -1,0 +1,189 @@
+{% extends 'chatbase.html' %}
+{% load static %}
+
+
+{% block chatbody %}
+ <!-- Start dynamic chatbot -->
+
+ <div class="main-center-content-m-left center-content search-sticky">
+    <div class="question_answer__wrapper__chatbot" id="report_dynamic_field">
+        {% if conversation  %}
+        {% for qa in conversation.questions %}
+                <div class="single__question__answer">
+                    <div class="question_user">
+                        <div class="left_user_info">
+                            <img src="{% static 'chatbot/assets/images/avatar/man.png' %}" style="height: 35px; width: 35px;" alt="avatar">
+                            <div class="question__user">{{ qa.question }}</div>
+                        </div>
+                    </div>
+                    <div class="answer__area">
+                        <div class="thumbnail">
+                            <img src="{% static 'ui/assets/images/favicon.ico' %}" alt="avatar">
+                        </div>
+                        <div class="answer_main__wrapper">
+                            <p class="disc">
+                                {{ qa.answer}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+          
+        {% endfor %}
+       
+    {% endif %}
+
+    </div>
+    <div >
+        <form action="#" class="search-form">
+            <input type="text" name="tynChatInput"  id="tynChatInput" placeholder="Type your message here...">
+            <button id="chatbtn"><i class="fa-regular fa-arrow-up"></i></button>
+        </form>
+    </div>
+    
+    
+</div>
+<!-- End dynamic chatbot -->
+
+
+
+<div class="right-side-bar-new-chat-option">
+    <div class="new-chat-option">
+        <a href="{% url 'chatui' %}" style="color: blue;">
+            <!-- <img src="{% static 'chatbot/assets/images/logo/logo-02.png' %}" alt="logo"> -->
+             New Chat
+            <img src="{% static 'chatbot/assets/images/icons/04.png' %}" alt="icons">
+        </a>
+    </div>
+    <div class="chat-history-wrapper">
+        
+          
+
+
+
+            <div class="chat-history-area-start">
+                <!-- <h6 class="title">Today</h6> -->
+
+                {% if conversations %}
+
+                {% for conversation in conversations  %}
+                   
+
+                <div class="single-history">
+                    <a href="{% url 'dynamic' conversation.id %}"><p>{{ conversation.title|truncatechars:30 }}</p> 
+                    <a href="{% url 'dynamic_delete' conversation.id %}">
+                        <img src="{% static 'chatbot/assets/images/icons/icons8-delete.svg' %}" alt="icons" width="50px">
+                        
+                    </a>
+                </div>
+               
+              
+
+                {% endfor %}
+                {% else %}
+                <p>No conversations found.</p>
+            {% endif %}
+            </div>
+
+
+            
+
+
+
+
+
+
+        
+    </div>
+    <div class="right-side-open-clouse" id="collups-right">
+        <img src="{% static 'chatbot/assets/images/icons/01.svg' %}" alt="icons">
+    </div>
+</div>
+{% endblock chatbody %}
+
+
+   
+{% block js%}
+<script>
+    $(document).ready(function () {
+        let isFirstRequest = true; // Track if it's the first request
+
+        $('#chatbtn').click(function (e) {
+            e.preventDefault();
+
+            let user_input = $("#tynChatInput").val();
+            $("#tynChatInput").val("");  // Clear the input field
+
+            // Show user's message instantly
+            $('#report_dynamic_field').append(
+                `<div class="single__question__answer user-message">
+                    <div class="question_user">
+                        <div class="left_user_info">
+                            <img src="{% static 'chatbot/assets/images/avatar/man.png' %}" style="height: 35px; width: 35px;" alt="avatar">
+                            <div class="question__user">${user_input}</div>
+                        </div>
+                    </div>
+                    <div class="answer__area pending-response">
+                        <div class="thumbnail">
+                            <img src="{% static 'ui/assets/images/favicon.ico' %}" alt="avatar">
+                        </div>
+                        <div class="answer_main__wrapper">
+                            <p class="disc loading-indicator">Loading...</p> <!-- Loading indicator here -->
+                        </div>
+                    </div>
+                </div>`
+            );
+
+            // Function to handle typing animation
+            const displayTypingEffect = (text, element) => {
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < text.length) {
+                        $(element).append(text[index++]);
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 20);  // Adjust typing speed here (50 ms per character)
+            };
+
+            // Define how to handle the server response
+            const handleResponse = function(response) {
+                console.log("Response from server:", response);
+
+                // Replace loading indicator with empty element for typing effect
+                const typingElement = $('.pending-response').last().find('.loading-indicator');
+                typingElement.text(''); // Clear loading text
+
+                // Start typing animation in the cleared element
+                displayTypingEffect(response.data.chatbot_response, typingElement);
+
+                isFirstRequest = false; // Update after the first request
+            };
+
+            $.ajax({
+                url: "{% url 'chat_add' %}",
+                type: 'get',
+                dataType: 'json',
+                data: { offset: user_input },
+                success: function(response) {
+                    // If it's the first request, add a delay to allow session initialization
+                    if (isFirstRequest) {
+                        setTimeout(() => handleResponse(response), 50);  // 500ms delay
+                    } else {
+                        handleResponse(response);
+                    }
+                },
+                complete: function () {
+                    console.log("Request completed.");
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error loading content:", error);
+                    alert("There was an error loading the chat response. Please try again.");
+                }
+            });
+        });
+    });
+</script>
+
+
+
+{% endblock js%}

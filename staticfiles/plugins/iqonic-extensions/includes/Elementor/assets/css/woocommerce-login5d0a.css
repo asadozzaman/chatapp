@@ -1,0 +1,56 @@
+.woocommerce-form-login .woocommerce-form-row,
+.woocommerce-form-register .woocommerce-form-row{
+    margin:0 0 2em;
+} 
+.woocommerce-form-login .woocommerce-form__input{
+    height: 1.75em;
+}
+.woocommerce-form-login .login-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.woocommerce-form-login .login-inner .woocommerce-form__label,
+.woocommerce-form-login .login-inner .woocommerce-LostPassword{
+    margin: 0;
+}
+.woocommerce-form-login  .form-submit-btn{
+    margin:2em 0 2em 0;
+}
+.woocommerce-form-login .sign_up_text a{
+    color: var(--color-theme-primary);
+}
+.woocommerce-form-login .sign-link{
+    display: flex;
+    align-items: center;
+}
+.woocommerce-form-register  .sign-up-btn{
+    margin-top:2em;
+    margin-bottom: 0;
+}
+.woocommerce-terms-and-conditions-link,
+.woocommerce-terms-and-conditions-link:hover{
+    color: var(--color-theme-primary);
+}
+
+.css_prefix-woocommerce-custom-form p.logged-in {
+	text-align: center;
+	margin: 0;
+}
+
+
+
+@media(max-width:479px){
+    .woocommerce-form-login .login-inner{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .woocommerce-form-login .login-inner .woocommerce-LostPassword{
+        margin-top: 1em;
+    }
+    .woocommerce-form-login .sign-link{
+       flex-direction: column;
+       align-items: flex-start;
+    }
+}

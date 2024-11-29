@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+                      counter
+--------------------------------------------------------------*/
+.iq-counter {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.iq-counter .timer {
+    font-size: 2em;
+    line-height: 42px;
+    font-family: var(--highlight-font-family);
+    color: var(--color-theme-secondary);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.iq-counter .counter-title {
+    color: var(--global-font-color);
+}
+
+.iq-counter .iq-icon {
+    margin-bottom: 15px;
+}
+
+.iq-counter .counter-content .iq-counter-info {
+    margin-bottom: 0;
+}
+
+.iq-counter .counter-content .iq-counter-info span {
+    display: inline-block;
+}
+
+.iq-counter .counter-content .iq-counter-info span.icon {
+    color: var(--color-theme-secondary);
+    font-size: 32px;
+}
+
+@media (max-width: 991px){
+    .iq-counter .timer {
+		font-size: 52px;
+		line-height: 62px;
+	}
+}

@@ -1,0 +1,34 @@
+.css_prefix-icon-box-icon {
+    padding-bottom: 42px;
+}
+
+.css_prefix-icon-box .css_prefix-icon-box-description {
+    text-transform: capitalize;
+}
+
+.css_prefix-icon-box.icon-left {
+    display: flex;
+    gap: 30px;
+}
+
+.css_prefix-icon-box.icon-right {
+    display: flex;
+    gap: 30px;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.css_prefix-icon-box.icon-left .css_prefix-icon-box-icon, .css_prefix-icon-box.icon-right .css_prefix-icon-box-icon {
+    padding-bottom: 0;
+}
+
+.css_prefix-icon-box.icon-left p.css_prefix-icon-box-description, .css_prefix-icon-box.icon-right p.css_prefix-icon-box-description {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+@media (max-width:767px) {
+    .css_prefix-icon-box-icon {
+        padding-bottom: 25px;
+    }
+}

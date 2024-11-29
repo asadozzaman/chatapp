@@ -1,0 +1,78 @@
+/*---------------------------------------------------------------------
+                         Progress Bar
+-----------------------------------------------------------------------*/
+.iq-progressbar-box .iq-progressbar-content {
+    margin-bottom: 30px;
+}
+
+.iq-progressbar-box .iq-progressbar-content:last-child {
+    margin-bottom: 0
+}
+
+.progress-value {
+    float: right;
+    border-radius: 0;
+    color: var(--color-theme-secondary);
+    position: relative;
+    bottom: 22px;
+    right: 0;
+    font-weight: var(--font-weight-semi-bold);
+    font-family: var(--global-font-family);
+}
+
+.iq-progress-bar {
+    border-radius: 90px;
+    background: #f5f5f5 none repeat scroll 0 0;
+    box-shadow: 0 0 0;
+    height: 5px;
+    margin: 0;
+    position: relative;
+    width: 90%;
+    margin: 5px 0 0;
+}
+
+.iq-progress-bar>span {
+    border-radius: 90px;
+    background: var(--color-theme-primary) none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    width: 0;
+}
+
+.slide-in-top {
+    -webkit-animation: slide-in-top 1.6s linear infinite alternate backwards;
+    animation: slide-in-top 1.6s linear infinite alternate backwards;
+}
+
+/*====================
+animation
+==========================*/
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 479px){
+    .iq-progress-bar {
+		width: 80%;
+	}
+}

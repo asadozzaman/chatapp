@@ -1,0 +1,123 @@
+/*------------------------------------------------------------------
+                   List
+------------------------------------------------------------------*/
+ul.list-column-two {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+    padding: 0;
+}
+
+ul.list-column-three {
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    list-style: none;
+    padding: 0;
+}
+
+ul.list-column-four {
+    columns: 4;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    list-style: none;
+    padding: 0;
+}
+
+ul.list-column-two i,
+ul.list-column-three i,
+ul.list-column-four i {
+    margin-right: 10px;
+}
+
+ul.list-column-one {
+    list-style: none;
+    margin: 0;
+}
+
+.iq-list {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.iq-list.list-style-2{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.iq-list.list-style-2 ul{
+    margin: 0;
+    padding: 0;
+}
+
+.iq-list li {
+    margin-bottom: 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.iq-list li:last-child {
+    margin-bottom: 0;
+}
+
+.iq-list li i {
+    float: left;
+    font-size: 24px;
+    margin-top: 5px;
+    margin-right: 15px;
+    color: var(--color-theme-primary);
+}
+
+.iq-list li svg{
+    margin-right: 15px;
+}
+
+.iq-list li span {
+    display: table-cell;
+}
+
+.our-project ul.iq-list {
+    margin-bottom: 0;
+}
+
+.our-project ul.iq-list li {
+    float: left;
+    width: 50%;
+}
+
+.our-project .iq-list li i,
+.our-project .iq-list li span {
+    color: var(--color-theme-secondary);
+    font-weight: var(--font-weight-bold);
+}
+
+.our-project .iq-list li:hover i,
+.our-project .iq-list li:hover span {
+    color: var(--color-theme-primary);
+}
+
+.iq-list li.text-center {
+    justify-content: center;
+}
+.iq-list li.text-start {
+    justify-content: start;
+}
+.iq-list li.text-end {
+    justify-content: end;
+}
+
+@media (max-width: 479px){
+    ul.list-column-two,
+	ul.list-column-three,
+	ul.list-column-four {
+		columns: 1;
+		-webkit-columns: 1;
+		-moz-columns: 1;
+	}
+}

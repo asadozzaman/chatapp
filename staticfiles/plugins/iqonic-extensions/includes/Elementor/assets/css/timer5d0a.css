@@ -1,0 +1,93 @@
+.iq-count-down .displaySection {
+  padding: 0 35px;
+  margin: 0 10px;
+  display: inline-grid;
+  text-align: center;
+  position: relative;
+}
+
+.displaySection:after {
+  content: ":";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 0);
+  font-size: 30px;
+  color:var(--color-meta-dot);
+  line-height: 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.displaySection:first-child:after {
+  display: none;
+}
+
+
+.iq-count-down .numberDisplay {
+  display: inline-block;
+  transition: transform 1s ease-in-out;
+  color: var(--global-font-title);
+  font-family: var(--highlight-font-family);
+  -webkit-font-feature-settings: "tnum"on, "lnum"on;
+  font-feature-settings: "tnum"on, "lnum"on;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h1);
+  line-height: var(--font-line-height-h1);
+  letter-spacing: var(--font-letter-spacing-h1);
+}
+
+.periodDisplay {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--global-font-family);
+  letter-spacing: 3px;
+}
+
+.timerDisplay.label5 {
+  display: block;
+}
+
+.iq-count-down .periodDisplay {
+  font-family: var(--highlight-font-family);
+  -webkit-font-feature-settings: "tnum"on, "lnum"on;
+  font-feature-settings: "tnum"on, "lnum"on;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-h5);
+  font-size: var(--font-size-h6);
+  color: var(--global-font-color);
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing-one);
+}
+
+@media (max-width: 485px) {
+  .timerDisplay.label5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iq-count-down .displaySection {
+    padding: 0 35px 35px 35px;
+  }
+
+  .iq-count-down .displaySection:last-child {
+    padding-bottom: 0;
+  }
+
+  .displaySection:after {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(90deg);
+  }
+}
+
+@media (max-width:480px) {
+  .iq-count-down .displaySection {
+    padding: 0 15px 15px 15px;
+    margin: 0 5px 20px;
+  }
+  .displaySection:after {
+    display: none;
+  }
+}

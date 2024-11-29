@@ -1,0 +1,275 @@
+/*------------------------------------------------------------------
+                   Tab
+------------------------------------------------------------------*/
+.iq-amazing-tab .tab-content section {
+    display: none;
+}
+
+.iq-amazing-tab .tab-content section.active {
+    display: block;
+}
+
+.iq-amazing-tab .nav-tabs .nav-link i {
+    font-size: 20px;
+    margin: 0 0.4em 0 0;
+}
+
+.iq-amazing-tab .nav-tabs {
+    background: var(--color-theme-white);
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    border: none;
+    padding: 0;
+    border-radius: var(--border-radius);
+}
+
+.iq-amazing-tab .nav-tabs .nav-link {
+    overflow: visible;
+    position: relative;
+    border: none;
+    padding: 1em 2em;
+    transition: all 0.5s ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+.iq-amazing-tab .nav-tabs li {
+    text-align: center;
+    font-weight: var(--font-weight-semi-bold);
+    vertical-align: middle;
+    display: block;
+    margin: 0;
+    width: 33.33%;
+}
+
+.iq-amazing-tab .nav-tabs li .nav-link {
+    color: var(--global-font-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.iq-amazing-tab .nav-tabs li .nav-link:hover {
+    color: var(--color-theme-secondary);
+}
+
+.iq-amazing-tab .nav-tabs li .nav-link.active {
+    background: var(--color-theme-secondary);
+    color: var(--color-theme-white);
+}
+
+.iq-amazing-tab .nav-tabs li:last-child {
+    margin-right: 0;
+}
+
+.tab-content p {
+    margin-bottom: 0;
+}
+
+.iq-amazing-tab.text-center .nav-tabs{
+    justify-content: center;
+}
+
+.iq-amazing-tab.text-end .nav-tabs{
+    justify-content: end;
+}
+
+/*---------------------------------------------------------------------
+Custom Tab
+-----------------------------------------------------------------------*/
+.iq-vertical-tab {
+    padding: 45px 30px;
+    background: var(--color-theme-white);
+    margin-right: 0;
+    margin-left: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--global-box-shadow);
+    padding: 30px 30px 30px 15px;
+}
+
+.iq-vertical-tab .nav.nav-pills {
+    display: block;
+    width: 100%;
+    box-shadow: var(--global-box-shadow);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--color-theme-white);
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] li {
+    display: inline-block;
+    width: 24.72%;
+    position: relative;
+}
+
+.iq-vertical-tab .nav.nav-pills li a.nav-link.active {
+    position: relative;
+}
+
+.iq-vertical-tab .nav.nav-pills li a.nav-link.active:before {
+    content: "\f105";
+    font-family: FontAwesome;
+    font-weight: 900;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 1;
+    font-size: 14px;
+    color: var(--color-theme-primary);
+    line-height: normal;
+}
+
+.iq-vertical-tab .nav-pills .nav-link .tab-title {
+    display: inline-block;
+}
+
+.iq-vertical-tab .tab-content {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.iq-vertical-tab .tab-content .tab-pane {
+    padding-top: 15px;
+}
+
+.iq-vertical-tab .tab-content .tab-pane .content-title {
+    margin-bottom: 15px;
+}
+
+.iq-vertical-tab .tab-content .tab-pane p {
+    margin-bottom: 15px;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] li.nav-item {
+    width: 100%;
+    vertical-align: middle;
+    float: left;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link {
+    padding: 15px 15px 8px;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: 18px;
+    border-radius: 0;
+    text-align: left;
+    color: var(--global-font-color);
+    display: inline-flex;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link h5 {
+    font-size: 18px;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link:last-child,
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] li.nav-item:last-child {
+    margin-bottom: 0;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link.active h5,
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link:hover h5 {
+    color: var(--color-theme-white);
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link.active {
+    box-shadow: none;
+    background: transparent;
+    color: var(--color-theme-primary);
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link:hover {
+    box-shadow: none;
+    background: transparent;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link.active:before,
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link:hover:before {
+    display: none;
+}
+
+.iq-vertical-tab .nav.nav-pills[aria-orientation="vertical"] .nav-link .iq-icon {
+    margin-right: 15px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+/* tab lists */
+
+.tab-lists li {
+    margin-bottom: 1em;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--global-font-size);
+    line-height: 26px;
+    text-transform: capitalize;
+    color: var(--global-font-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.tab-lists li i {
+    color: var(--color-theme-primary);
+}
+@media (max-width: 991px){
+    .iq-vertical-tab .nav.nav-pills {
+		border-right: none;
+	}
+
+}
+
+@media (max-width: 767px) {
+    .iq-amazing-tab .nav-tabs .nav-link {
+        padding: 1em;
+    }
+}
+
+@media (max-width: 479px){
+    .iq-amazing-tab .nav-tabs {
+		border-radius: var(--border-radius);
+	}
+
+    .iq-amazing-tab .nav-tabs li .nav-link {
+        border-radius: var(--border-radius);
+    }
+
+	.iq-amazing-tab .nav-tabs .nav-link {
+		border-radius: var(--border-radius);
+	}
+
+    .iq-amazing-tab .nav-tabs li {
+		margin-right: 0;
+	}
+
+    .iq-amazing-tab .nav-tabs .nav-link span::before {
+		display: none;
+	}
+
+    .iq-amazing-tab .nav-tabs .nav-link span {
+		width: 100%;
+		height: 100%;
+	}
+
+	.iq-amazing-tab .nav-tabs .nav-item {
+		width: 100%;
+	}
+
+	.iq-amazing-tab .nav-tabs .nav-link.active span,
+	.iq-amazing-tab .nav-tabs .nav-link:hover span {
+		background: #ff7364;
+	}
+
+	.iq-amazing-tab .nav-tabs .nav-link::before {
+		display: none;
+	}
+
+    .iq-vertical-tab {
+		padding: 15px 0px;
+	}
+
+	.iq-vertical-tab .tab-content {
+		padding-left: 15px;
+	}
+}

@@ -1,0 +1,116 @@
+{% extends 'mainbase.html' %}
+{% load static %}
+
+
+{% block mainbody %}
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Popup container -->
+<div class="popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p>Password reset email sent..!</p>
+</div>
+<div class="popup" id="error">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p>Invalid email address..!</p>
+</div>
+
+
+
+
+    <!-- rts breadcrumb area start-->
+    <div class="rts-bread-crumb-area bg_image">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inne">
+                        <div class="title-area">
+
+                            <h1 class="bread-title" style="color: rgb(2, 41, 48);">Reset Password </h1>
+                            <div class="inner-wrapper">
+                                <a href="{% url 'welcome' %}" style="color: rgb(0, 0, 0);">Home /</a>
+                                <a href="#" class="active" style="color: rgb(7, 75, 87);">Reset Password</a>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rts breadcrumb area end -->
+
+
+    <!-- rtsa reset area start -->
+    <div class="rts-reset-area rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-form-s-wrapper text-start ptb--120 ptb_sm--50">
+                        <div class="head">
+                            <h5 class="title">Reset Your Password</h5>
+                            <p class="mb--20">Strong passwords include numbers, letters, and
+                                punctuation marks.</p>
+                        </div>
+                        <div class="body">
+                            <form action="#">
+                                <div class="input-wrapper">
+                                    <input type="email" id="email" placeholder="Enter your mail" required>
+                                </div>
+                                <div class="check-wrapper">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I agree to privacy policy & terms
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" onclick="resetPassword()" class="rts-btn btn-primary">Send Reset Link</button>
+                                <p><a href="{% url 'login' %}"><i class="fa-solid fa-arrow-left"></i> Back to Login</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- rtsa reset area end -->
+
+
+
+
+
+
+
+
+
+
+    <!-- cta area start -->
+    <!-- cta area start -->
+    <div class="rts-cta-area rts-section-gapBottom  bg_faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="cta-main-wrapper bg_image">
+                        <div class="left">
+                            <h3 class="title">
+                                All set to level up <br>
+                                your content game?
+                            </h3>
+                            <a href="about.html" class="rts-btn btn-primary">Get Started Now</a>
+                        </div>
+                        <div class="right">
+                            <img src="{% static 'ui/assets/images/cta/02.png' %}" alt="cta-area">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cta area end -->
+    <!-- cta area end -->
+
+
+{% endblock mainbody %}

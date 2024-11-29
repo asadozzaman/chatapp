@@ -1,0 +1,433 @@
+/*---------------------------------------------------------------------
+                  Pricing Plan
+-----------------------------------------------------------------------*/
+
+/*style1*/
+.iq-talkie-price {
+    margin-top: 30px;
+    background: var(--color-theme-white-box);
+    padding: 30px;
+    border-radius: var(--border-radius-ten);
+    position: relative;
+    box-shadow: var(--global-box-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+.iq-talkie-price .iq-price-info .title,
+.iq-talkie-price .iq-price-info .sub-title {
+    color: var(--color-theme-primary);
+    text-transform: uppercase;
+}
+
+.iq-talkie-price .iq-price-info .price {
+    font-size: 60px;
+    color: var(--color-theme-secondary);
+    line-height: normal;
+}
+
+.iq-talkie-price .iq-talkie-price-info li {
+    list-style: none;
+    line-height: 45px;
+}
+
+.iq-talkie-price .iq-talkie-price-info li span::before {
+    content: "-";
+    margin-right: 5px;
+}
+
+.iq-talkie-price .iq-price-info .title {
+    margin-bottom: 30px;
+}
+
+.iq-talkie-price .iq-talkie-price-info {
+    margin-bottom: 45px;
+    padding: 0;
+}
+.iq-talkie-price .css_prefix-button {
+    width: 100%;
+}
+.iq-talkie-price.active {
+    margin-top: 0;
+}
+
+.iq-talkie-price.active,
+.iq-talkie-price:hover {
+    background: var(--color-theme-secondary );
+    color: var(--color-theme-white);
+    box-shadow: var(--global-box-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+.iq-talkie-price.active .iq-price-info .title,
+.iq-talkie-price.active .iq-price-info .sub-title,
+.iq-talkie-price:hover .iq-price-info .title,
+.iq-talkie-price:hover .iq-price-info .sub-title,
+.iq-talkie-price:hover .iq-price-info .price,
+.iq-talkie-price.active .iq-price-info .price {
+    color: var(--color-theme-white);
+}
+
+.iq-talkie-price.active .css_prefix-button,
+.iq-talkie-price:hover .css_prefix-button {
+    background: var(--color-theme-white);
+    color: var(--global-font-title);
+}
+
+.iq-talkie-price.active .css_prefix-button:hover,
+.iq-talkie-price.active .css_prefix-button:focus,
+.iq-talkie-price:hover .css_prefix-button:hover,
+.iq-talkie-price:hover .css_prefix-button:focus {
+    background: var(--color-theme-white);
+    color: var(--global-font-title);
+}
+
+.iq-talkie-price.active::before,
+.iq-talkie-price:hover::before {
+    background: url("../images/icons/price.html");
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: -1px;
+    height: 55px;
+    width: 57px;
+}
+
+/*style 2*/
+.iq-talkie-price-2 {
+    float: left;
+    width: 100%;
+    border-radius: var(--border-radius);
+    background: var(--color-theme-white-box);
+    box-shadow: var(--global-box-shadow);
+    transition: all 0.5s ease-in-out;
+}
+
+.iq-talkie-price-2.active {
+    background: var(--color-theme-secondary);
+    color: var(--color-theme-white);
+    transition: all 0.5s ease-in-out;
+}
+.iq-talkie-price-2:hover {
+    transform: translateY(-15px);
+}
+.iq-talkie-price-2 .iq-price-info {
+    padding: 30px 30px 0;
+}
+
+.iq-talkie-price-2 .iq-price-info .title {
+    margin-bottom: 15px;
+}
+
+.iq-talkie-price-2 .iq-price-info .price span.sub-title {
+    font-size: 16px;
+    color: var(--color-theme-primary);
+    font-weight: normal;
+}
+
+.iq-talkie-price-2 .iq-price-info .price {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 0px;
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.iq-talkie-price-2 .iq-price-info .sub-title {
+    margin-bottom: 0;
+}
+
+.iq-talkie-price-2 .iq-talkie-price-info {
+    padding: 30px 30px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.iq-talkie-price-2 .iq-talkie-price-info li i {
+    font-size: 24px;
+    line-height: normal;
+}
+
+.iq-talkie-price-2 .iq-talkie-price-info li i {
+    color: var(--color-theme-primary);
+}
+
+.iq-talkie-price-2 .iq-talkie-price-info li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-bottom: .5em;
+}
+
+.iq-talkie-price-2 .iq-talkie-price-info li:last-child {
+    margin-bottom: 0;
+}
+
+
+.iq-talkie-price-2.active .iq-price-info .title-sub {
+    display: block;
+    margin-bottom: 30px;
+    color: var(--color-theme-primary);
+}
+
+.iq-talkie-price-2.active .iq-price-info .title,
+.iq-talkie-price-2.active .iq-price-info .price,
+.iq-talkie-price-2.active .css_prefix-button {
+    color: var(--color-theme-white);
+}
+
+.iq-talkie-price-2 .css_prefix-button {
+    text-align: center;
+    width: 100%;
+    display: block;
+    color: var(--global-font-title);
+    border-top: 0.0625em solid var(--border-color-light);
+    padding: 1.5em 1em;
+    margin-top: 2em;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    transition: all .3s ease-in;
+}
+
+.iq-talkie-price-2 .css_prefix-button:hover {
+    background: var(--global-font-title);
+    color: var(--color-theme-white);
+    border-color: transparent;
+}
+
+.iq-talkie-price-2:hover  .css_prefix-button .btn-icon svg line {
+    stroke-dashoffset: 20;
+}
+
+
+/*style3*/
+.iq-talkie-price-3 {
+    margin-top: 0;
+    background: var(--color-theme-white-box);
+    padding: 0px;
+    border-radius: var(--border-radius-ten);
+    position: relative;
+    box-shadow: var(--global-box-shadow);
+}
+
+.iq-talkie-price-3 .iq-price-info {
+    padding: 45px 30px;
+    border-bottom: 1px solid #ebedf7;
+}
+
+.iq-talkie-price-3 .iq-price-info .title {
+    color: var(--color-theme-secondary);
+}
+
+.iq-talkie-price-3 .iq-price-info .price {
+    color: var(--color-theme-primary);
+    font-size: 60px;
+    line-height: normal;
+}
+
+.iq-talkie-price-3 .iq-price-info .price span.sub-title {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.iq-talkie-price-3 .iq-talkie-price-info li {
+    list-style: none;
+    line-height: 45px;
+}
+
+.iq-talkie-price-3 .iq-price-info .title {
+    margin-bottom: 15px;
+}
+
+.iq-talkie-price-3 .iq-talkie-price-info {
+    padding: 30px 45px;
+}
+
+.iq-talkie-price-3 .css_prefix-button {
+    margin: 0 30px 45px;
+}
+
+.iq-talkie-price-3.active {
+    margin-top: 0;
+}
+
+.iq-talkie-price-3.active {
+    background: var(--color-theme-secondary);
+    color: var(--color-theme-white);
+    transition: all 0.5s ease-in-out;
+}
+
+.iq-talkie-price-3.active .iq-price-info .title,
+.iq-talkie-price-3.active .iq-price-info .sub-title,
+.iq-talkie-price-3.active .iq-price-info .price,
+.iq-talkie-price-3.active .iq-price-info .price span.sub-title {
+    color: var(--color-theme-white);
+}
+
+.iq-talkie-price-3.active .css_prefix-button {
+    background: var(--color-theme-white-box);
+    color: var(--global-font-title);
+}
+
+.iq-talkie-price-3.active .css_prefix-button:hover,
+.iq-talkie-price-3.active .css_prefix-button:focus {
+    background: var(--color-theme-primary);
+    color: var(--color-theme-white);
+}
+
+/*pricing tab*/
+.pricing-tab {
+    border: none;
+    display: inline-block;
+    background: var(--color-theme-white-box);
+    border-radius: var(--border-radius-ten);
+    width: auto;
+    margin-top: 45px;
+}
+
+.pricing-tab li {
+    display: inline-block;
+    border-radius: var(--border-radius-ten);
+}
+
+.pricing-tab li .nav-link {
+    color: var(--color-theme-primary);
+    background: var(--color-theme-white-box);
+    border: none;
+    border-radius: var(--border-radius-ten);
+    padding: 10px 30px;
+}
+
+.pricing-tab li .nav-link.active {
+    background: var(--color-theme-primary);
+    color: var(--color-theme-white);
+}
+
+#iq-talkie-price .tab-content .iq-talkie-price {
+    text-align: center;
+    margin-top: 0;
+    padding: 30px 75px;
+}
+
+#iq-talkie-price .tab-content .iq-talkie-price ul {
+    padding: 0;
+}
+
+#iq-talkie-price .tab-content .iq-talkie-price li {
+    list-style: none;
+    line-height: 45px;
+}
+
+#iq-talkie-price .tab-content .iq-talkie-price li::before {
+    content: "-";
+    margin-right: 5px;
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price {
+    margin: 0;
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price .iq-price-info .price,
+#iq-talkie-price .tab-content .iq-talkie-price:hover .iq-price-info .price {
+    color: var(--color-theme-white);
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price {
+    background: var(--color-theme-primary);
+    color: var(--color-theme-white);
+    transition: all 0.5s ease-in-out;
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price .iq-price-info .title,
+#iq-talkie-price .tab-content>.active .iq-talkie-price .iq-price-info .sub-title {
+    color: var(--color-theme-secondary);
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price .button {
+    background: var(--color-theme-white-box);
+    color: var(--color-theme-secondary);
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price .button:hover,
+#iq-talkie-price .tab-content>.active .iq-talkie-price .button:focus {
+    background: var(--color-theme-primary);
+    color: var(--color-theme-white);
+}
+
+#iq-talkie-price .tab-content>.active .iq-talkie-price::before {
+    background: url("../images/icons/price.html");
+    content: "";
+    position: absolute;
+    right: 30px;
+    top: -1px;
+    height: 55px;
+    width: 57px;
+}
+
+#iq-talkie-price .tab-content>.tab-pane {
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 60px;
+}
+
+#iq-talkie-price .tab-content .iq-talkie-price {
+    box-shadow: none;
+}
+
+#iq-talkie-price .tab-content>.active {
+    transform: scale(1.1);
+    position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    margin: 60px 0;
+}
+
+/*===================
+responsive
+=======================*/
+@media (max-width: 1024px){
+    .iq-talkie-price-3.active {
+		transform: scale(1);
+	}
+}
+
+@media (max-width: 991px){
+    .pricing-tab {
+		margin: 0;
+	}
+
+    #iq-talkie-price {
+		margin-top: 90px;
+		padding: 15px;
+	}
+
+    #iq-talkie-price .tab-content>.tab-pane {
+		display: inline-block;
+		position: relative;
+		left: 0;
+		top: 0;
+		margin: 0 0 60px;
+	}
+
+    .iq-talkie-price-2 .iq-talkie-price-info {
+		padding: 30px 15px;
+	}
+
+}
+
+@media (max-width: 767px){
+    .iq-talkie-price.active {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 479px){
+    .iq-talkie-price.active::before,
+	.iq-talkie-price:hover::before {
+		display: none;
+	}
+
+    .iq-talkie-price-2 .iq-talkie-price-info {
+		padding: 30px;
+	}
+}
