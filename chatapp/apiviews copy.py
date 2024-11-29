@@ -316,10 +316,54 @@ sys.stdout.reconfigure(encoding='utf-8')
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-def ask_question(question):
-    bot_response = chat.send_message(question)
-    return {
-        "question_text": question,
-        "answer_text": bot_response.text,
-    }
+@api_view(['POST'])
+def ask_question(request):
+    serializer = QuestionSerializer(data=request.data)
+    
+    # Validate the input data
+    if serializer.is_valid():
+        question = serializer.validated_data.get('question_text', '')
+        # prompt = """
+        # User input: I like bagels.
+        # Answer:
+        # """
 
+        # response = model.generate_content([prompt])
+        # print(response.text)
+        # data = response.text
+
+        # Start a chat session and send a message to the bot
+        bot_response = chat.send_message(question)
+
+        print('only',bot_response)
+        print('texttttttttt',bot_response.text)
+        return Response({
+            "question_text": question,
+            "answer_text": bot_response.text
+        }, status=200)
+
+        # Process the bot's response
+        # try:
+        #     # If `bot_response` has a `status_code` attribute, it is likely a response object
+        #     if hasattr(bot_response, 'status_code') and bot_response.status_code == 200:
+        #         response_text = bot_response.text
+        #         try:
+        #             data = bot_response.json()  # Attempt to parse JSON if available
+        #         except ValueError:
+        #             data = {"message": response_text}  # If not JSON, use the raw text
+        #     elif isinstance(bot_response, str):
+        #         # If the bot response is directly a string, assign it to `data`
+        #         data = {"message": bot_response}
+        #     else:
+        #         data = {"error": "Unexpected response format from the bot"}
+        # except AttributeError:
+        #     # Handle any unexpected attribute errors
+        #     data = {"error": "The bot response format is not supported"}
+
+        # return Response({
+        #     "question_text": question,
+        #     "answer_text": data
+        # }, status=200)
+    
+    # If serializer is not valid, return error details
+    return Response(serializer.errors, status=400)

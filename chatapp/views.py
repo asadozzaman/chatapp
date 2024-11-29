@@ -14,6 +14,7 @@ import firebase_admin
 
 # Initialize Firestore
 # from firebase_config import firebase_app  
+from chatapp.apiviews import ask_question
 from demo.settings import db
 
 
@@ -63,7 +64,6 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 
 
 
-@csrf_exempt
 def chat_add(request):
     
 
@@ -74,10 +74,13 @@ def chat_add(request):
         if not session_uid:
             session_uid = "4exc333443"
     
+    
     except Exception as e:
         # Handle any unexpected errors
         return JsonResponse({'error': f'An unexpected error occurred: {str(e)}'}, status=500)
 
+    session_uid = "4exc333443"
+    
     question = request.GET.get('offset')
     
     if not question:
@@ -85,17 +88,8 @@ def chat_add(request):
     
     try:
         # Sending POST request to the external service
-        response = requests.post(
-            'https://srv627362.hstgr.cloud/ask/', 
-            json={"question_text": question}
-        )
-        # response = requests.post(
-        #     'http://localhost:8000/ask/', 
-        #     json={"question_text": question}
-        # )
-        response.raise_for_status()  # Ensure HTTP error codes are raised
-        data = response.json()
-        answer_text = data.get('answer_text', 'No answer provided')
+        response = ask_question(question)
+        answer_text = response.get('answer_text', 'No answer provided')
 
         # Initialize or update session variables
         if 'counter' not in request.session:
