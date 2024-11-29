@@ -85,14 +85,14 @@ def chat_add(request):
     
     try:
         # Sending POST request to the external service
-        # response = requests.post(
-        #     'https://srv627362.hstgr.cloud/ask/', 
-        #     json={"question_text": question}
-        # )
         response = requests.post(
-            'http://localhost:8000/ask/', 
+            'https://srv627362.hstgr.cloud/ask/', 
             json={"question_text": question}
         )
+        # response = requests.post(
+        #     'http://localhost:8000/ask/', 
+        #     json={"question_text": question}
+        # )
         response.raise_for_status()  # Ensure HTTP error codes are raised
         data = response.json()
         answer_text = data.get('answer_text', 'No answer provided')
