@@ -64,6 +64,7 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
 
 
 
+@csrf_exempt
 def chat_add(request):
     
 
