@@ -80,7 +80,6 @@ def chat_add(request):
         # Handle any unexpected errors
         return JsonResponse({'error': f'An unexpected error occurred: {str(e)}'}, status=500)
 
-    session_uid = "4exc333443"
     
     question = request.GET.get('offset')
     
