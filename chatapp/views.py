@@ -130,8 +130,17 @@ def chat_add(request):
     
     try:
         # Sending POST request to the external service
-        response = ask_question(question)
-        answer_text = response.get('answer_text', 'No answer provided')
+        response = requests.post(
+            'https://foresightbytes.com/ask/', 
+            json={"question_text": question}
+        )
+        # response = requests.post(
+        #     'http://localhost:8000/ask/', 
+        #     json={"question_text": question}
+        # )
+        response.raise_for_status()  # Ensure HTTP error codes are raised
+        data = response.json()
+        answer_text = data.get('answer_text', 'No answer provided')
         # Ensure answer_text is a valid string
         specific_wordsALERTstar = ['*', '**']
         if isinstance(answer_text, str):

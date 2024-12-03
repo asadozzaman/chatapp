@@ -316,10 +316,22 @@ sys.stdout.reconfigure(encoding='utf-8')
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-def ask_question(question):
-    bot_response = chat.send_message(question)
-    return {
-        "question_text": question,
-        "answer_text": bot_response.text,
-    }
+@api_view(['POST'])
+def ask_question(request):
+    serializer = QuestionSerializer(data=request.data)
+    
+    # Validate the input data
+    if serializer.is_valid():
+        question = serializer.validated_data.get('question_text', '')
+       
+        bot_response = chat.send_message(question)
 
+        return Response({
+            "question_text": question,
+            "answer_text": bot_response.text
+        }, status=200)
+
+      
+    
+    # If serializer is not valid, return error details
+    return Response(serializer.errors, status=400)
