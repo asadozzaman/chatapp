@@ -131,7 +131,7 @@ def chat_add(request):
     try:
         # Sending POST request to the external service
         response = requests.post(
-            'https://foresightbytes.com/ask/', 
+            'https://emobyte.com/ask/', 
             json={"question_text": question}
         )
         # response = requests.post(

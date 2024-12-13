@@ -61,8 +61,8 @@ SECRET_KEY = 'django-insecure-s%_zqldvx+4fwa&08*&ve08ty^p0=uc(dl$bfh3o27#x9ocg=b
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ['foresightbytes.com','www.foresightbytes.com']
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['emobyte.com','www.emobyte.com']
 
 
 
