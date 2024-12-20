@@ -17,6 +17,19 @@ from firebase_admin import auth, firestore
 from demo.settings import db
 
 
+from django.http import JsonResponse
+from django.contrib.auth import logout
+
+def clear_session(request):
+    if request.method == "POST":
+        # Clear the Django session
+        request.session.flush()  # Remove all session data
+        logout(request)  # Log out the user if using Django authentication
+        return JsonResponse({'message': 'Session cleared'}, status=200)
+    return JsonResponse({'error': 'Invalid request method'}, status=400)
+
+
+
 def registration(request):
     if request.method == 'POST':
         try:
@@ -50,43 +63,17 @@ def registration(request):
     return render(request, 'registration.html')
 
 
-
 def login(request):
-    if request.method == 'POST':
-        try:
-            # Extract email and password from the POST request
-            email = request.POST['email']
-            password = request.POST['password']
-
-
-            print('email',email)
-            print('password',password)
-
-            # Sign in the user with Firebase
-            user = auth.get_user_by_email(email)
-            
-            # Check Firestore for user details (optional)
-            user_doc = db.collection('users').document(user.uid).get()
-            if user_doc.exists:
-                user_data = user_doc.to_dict()
-            else:
-                user_data = {'message': 'No additional user data found in Firestore.'}
-
-            # You could also generate a custom token for additional operations
-            custom_token = auth.create_custom_token(user.uid)
-
-            print('custom_token',custom_token)
-
-            # Send a success response with user data and custom token
-            return JsonResponse({
-                'message': 'Login successful',
-                'user_data': user_data,
-                'custom_token': custom_token.decode('utf-8'),
-            }, status=200)
-
-        except Exception as e:
-            # Handle errors (e.g., invalid credentials or user not found)
-            return JsonResponse({'error': str(e)}, status=401)
-
-    return render(request, 'login.html')
+    email=request.POST.get('email')
+    pasw=request.POST.get('password')
+    try:
+        # if there is no error then signin the user with given email and password
+        user=auth.sign_in_with_email_and_password(email,pasw)
+    except:
+        message="Invalid Credentials!!Please ChecK your Data"
+        return render(request,"login.html",{"message":message})
+    session_id=user['idToken']
+    request.session['uid']=str(session_id)
+    return render(request,"a_mainchat.html",{"email":email})
+ 
 

@@ -9,6 +9,8 @@ from accounts.views import *
 urlpatterns = [
     path('registration/', registration, name='registration'),
     path('login/', login, name='login'),
+    path('clear-session/', clear_session, name='clear-session'),
+
     # path('sign-out/', SignOutView.as_view(), name='sign-out'),
     
 ]

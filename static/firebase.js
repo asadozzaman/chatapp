@@ -96,17 +96,57 @@ onAuthStateChanged(auth, (user) => {
 
   function logOut() {
     signOut(auth).then(() => {
-      // Sign-out successful.
-      isAuth = false;
-      console.log("Logged out")
-      // document.getElementById("auth-buttons").style.display = "none";
-      // document.getElementsByClassName("auth-buttons").style.display = "none";
-      window.location.href = "//";
-      toggleAuthButtons(false)
+        // Firebase sign-out successful
+        isAuth = false;
+        console.log("Logged out");
+
+        // Notify Django backend to clear the session
+        fetch('/clear-session/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken') // Include CSRF token
+            },
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log("Session cleared successfully");
+
+                // Manually delete session cookies
+                document.cookie = "sessionid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+                document.cookie = "session_uid=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT;";
+
+                // Redirect to home page or login
+                window.location.href = "/";
+            } else {
+                console.error("Failed to clear session");
+            }
+        })
+        .catch(error => {
+            console.error("Error clearing session:", error);
+        });
     }).catch((error) => {
-      // An error happened.
+        console.error("Error logging out:", error);
     });
-  }
+}
+
+
+// Helper function to get CSRF token
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
 
   async function getUserData(uid) {
     console.log("uid", uid)

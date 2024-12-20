@@ -12,5 +12,6 @@ class SetSessionMiddleware:
             request.session['uid'] = session_uid
         else:
             logger.debug("No Session UID found in cookies.")
+            request.session.flush()
         response = self.get_response(request)
         return response
