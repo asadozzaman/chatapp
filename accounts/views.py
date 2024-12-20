@@ -16,10 +16,13 @@ from firebase_admin import auth, firestore
 # Initialize Firestore
 from demo.settings import db
 
+from django.views.decorators.csrf import csrf_exempt
 
 from django.http import JsonResponse
 from django.contrib.auth import logout
 
+
+@csrf_exempt
 def clear_session(request):
     if request.method == "POST":
         # Clear the Django session
