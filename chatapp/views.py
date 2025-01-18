@@ -16,6 +16,8 @@ import firebase_admin
 # from firebase_config import firebase_app  
 from chatapp.apiviews import ask_question
 from demo.settings import db
+import re
+from django.utils.safestring import mark_safe
 
 
 
@@ -142,11 +144,24 @@ def chat_add(request):
         data = response.json()
         answer_text = data.get('answer_text', 'No answer provided')
         # Ensure answer_text is a valid string
-        specific_wordsALERTstar = ['*', '**']
-        if isinstance(answer_text, str):
-            for wordstar in specific_wordsALERTstar:
-                # Replace ** with a real line break
-                answer_text = answer_text.replace(wordstar, '\n')
+        # specific_wordsALERTstar = ['*', '**']
+        # if isinstance(answer_text, str):
+        #     for wordstar in specific_wordsALERTstar:
+        #         # Replace ** with a real line break
+        #         answer_text = answer_text.replace(wordstar, '\n')
+
+        # specific_wordsALERTstar = ['**']
+
+        # if isinstance(answer_text, str):
+        #     for wordstar in specific_wordsALERTstar:
+        #         answer_text = answer_text.replace(wordstar, '\n')
+        
+        
+
+        # formatted_response = {
+        #     "code_snippets": code_snippets,
+        #     "explanation": explanation
+        # }
         
         # Initialize or update session variables
         if 'counter' not in request.session:

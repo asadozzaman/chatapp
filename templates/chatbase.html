@@ -13,6 +13,27 @@
     <link rel="stylesheet" href="{% static 'chatbot/assets/css/vendor/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'chatbot/assets/css/style.css' %}">
     <style>
+        .disc {
+    white-space: pre-line; /* Preserves newlines and wraps text */
+    word-wrap: break-word; /* Breaks long words if necessary */
+    overflow-wrap: break-word; /* Adds support for older browsers */
+}
+
+        .code-block {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+.code-block code {
+    display: block;
+    white-space: pre-wrap;
+    color: #333;
+}
+
         .auth-buttons {
             display: none;
         }
@@ -631,8 +652,8 @@
                 <div class="user-wrapper">
                     <img src="{% static 'ui/assets/images/favicon.ico' %}" alt="avatar">
                     <div class="info">
-                        <h6 class="title">Foresightbyte</h6>
-                        <!-- <a href="#">Foresightbyte@net.com</a> -->
+                        <h6 class="title">Emobyte</h6>
+                        <!-- <a href="#">Emobyte@net.com</a> -->
                     </div>
                     <!-- <span>Free</span> -->
                 </div>

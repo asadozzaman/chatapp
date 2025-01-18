@@ -4,6 +4,7 @@
 
 {% block chatbody %}
  <!-- Start dynamic chatbot -->
+ {% load text_filters %}
 
  <div class="main-center-content-m-left center-content search-sticky">
     <div class="question_answer__wrapper__chatbot" id="report_dynamic_field">
@@ -22,7 +23,7 @@
                         </div>
                         <div class="answer_main__wrapper">
                             <p class="disc">
-                                {{ qa.answer}}
+                                {{ qa.answer|format_bold|linebreaksbr }}
                             </p>
                         </div>
                     </div>

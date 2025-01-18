@@ -61,8 +61,8 @@ SECRET_KEY = 'django-insecure-s%_zqldvx+4fwa&08*&ve08ty^p0=uc(dl$bfh3o27#x9ocg=b
 DEBUG = True
 
 
-# ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['emobyte.com','www.emobyte.com']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['emobyte.com','www.emobyte.com']
 
 
 
@@ -77,6 +77,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "accounts",
     "myapp",
+    "chatapp",
     "rest_framework",
 ]
 
