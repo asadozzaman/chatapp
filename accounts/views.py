@@ -56,12 +56,18 @@ def registration(request):
             })
 
             # Send a success response
+            messages.success(request, "User registered successfully!")
+
             return redirect('login')
             # return JsonResponse({'message': 'User registered successfully', 'uid': user.uid}, status=201)
 
         except Exception as e:
-            # Handle errors (e.g., duplicate email, invalid input)
-            return JsonResponse({'error': str(e)}, status=400)
+
+            #Invalid password string. Password must be a string at least 6 characters long.
+            messages.error(request, "Invalid password. Must be at least 6 characters long.")
+
+            return render(request, 'registration.html')
+          
 
     return render(request, 'registration.html')
 

@@ -14,6 +14,25 @@
     <span class="close-btn" onclick="closePopup()">&times;</span>
     <p>Invalid Credential..!</p>
 </div>
+                 {% if messages %}
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                {% for message in messages %}
+                    {% if message.tags == "success" %}
+                        Swal.fire({
+                            icon: 'success',
+                            title: '{{ message|escapejs }}',
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true,
+                            toast: false,
+                            position: 'center'
+                        });
+                    {% endif %}
+                {% endfor %}
+            });
+        </script>
+        {% endif %}
 
 <body class="tyn-body">
     <!-- rts breadcrumb area start-->

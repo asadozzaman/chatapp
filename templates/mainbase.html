@@ -17,6 +17,9 @@
     <link rel="stylesheet preload" href="{% static 'ui/assets/css/vendor/bootstrap.min.css' %}" as="style">
     <!-- custom css style -->
     <link rel="stylesheet preload" href="{% static 'ui/assets/css/style.css' %}" as="style">
+<!-- SweetAlert2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.min.css" rel="stylesheet">
+
 
     <!-- Chatbot css style -->
 
@@ -222,7 +225,7 @@
                             </div>
                             <div class="body">
                                 <ul class="menu">
-                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
                                     <li><a href="#">Community</a></li>
                                     <li><a href="#">Careers</a></li>
                                     <li><a href="#">Affiliate Program</a></li>
@@ -384,7 +387,9 @@
     <script src="{% static 'ui/assets/js/plugins/contact.form.js' %}" defer></script>
     <script src="{% static 'ui/assets/js/main.js' %}" defer></script>
     <script type="module" src="{% static 'firebase.js' %}" defer></script>
-    
+    <!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.1/dist/sweetalert2.all.min.js"></script>
+
     <!-- chatbot js -->
 </body>
 

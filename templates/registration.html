@@ -14,6 +14,29 @@
         <p>Your account has been created..!</p>
     </div>
 
+         
+
+
+          {% if messages %}
+                <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    {% for message in messages %}
+                        {% if message.tags == "error" %}
+                            Swal.fire({
+                                icon: 'error',
+                                title: '{{ message|escapejs }}',
+                                showConfirmButton: false,
+                                timer: 3000,
+                                timerProgressBar: true,
+                                toast: false,
+                                position: 'center'
+                            });
+                        {% endif %}
+                    {% endfor %}
+                });
+                </script>
+            {% endif %}
+
     <!-- rts breadcrumb area start-->
     <div class="rts-bread-crumb-area bg_image">
         <div class="container">
@@ -117,7 +140,7 @@
                                 All set to level up <br>
                                 your content game?
                             </h3>
-                            <a href="about.html" class="rts-btn btn-primary">Get Started Now</a>
+                            <a href="{% url 'registration' %}" class="rts-btn btn-primary">Get Started Now</a>
                         </div>
                         <div class="right">
                             <img src="{% static 'ui/assets/images/cta/02.png' %}" alt="cta-area">
@@ -129,5 +152,6 @@
     </div>
     <!-- cta area end -->
     <!-- cta area end -->
+
 
 {% endblock mainbody%}
